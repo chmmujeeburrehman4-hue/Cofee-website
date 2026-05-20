@@ -1,0 +1,2014 @@
+<!-- header-section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotary Farms - Header</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500&display=swap');
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --color-announce-bg: #0d3b4c;
+    --color-announce-text: #ffffff;
+    --color-nav-bg: #ffffff;
+    --color-nav-text: #1a1a1a;
+    --color-nav-text-hover: #0d3b4c;
+    --color-divider: #e0e0e0;
+    --font-primary: 'Barlow', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --announce-height: 36px;
+    --nav-height: 72px;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    background: #f4f4f2;
+  }
+
+  /* ─── ANNOUNCEMENT BAR ─────────────────────────────────────── */
+
+  .announcement-bar {
+    background-color: var(--color-announce-bg);
+    height: var(--announce-height);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .announcement-viewport {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .announcement-track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee-scroll 28s linear infinite;
+    list-style: none;
+    will-change: transform;
+  }
+
+  .announcement-track:hover {
+    animation-play-state: paused;
+  }
+
+  .announcement-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 32px;
+    position: relative;
+  }
+
+  .announcement-item::after {
+    content: '•';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 10px;
+  }
+
+  .announcement-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .announcement-text-wrapper span {
+    font-family: var(--font-primary);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-announce-text);
+  }
+
+  .announcement-icon {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 9px;
+  }
+
+  @keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ─── MAIN HEADER ───────────────────────────────────────────── */
+
+  .site-header {
+    background-color: var(--color-nav-bg);
+    border-bottom: 1px solid var(--color-divider);
+    width: 100%;
+  }
+
+  .header-inner-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ─── LEFT SECTION ──────────────────────────────────────────── */
+
+  .header-left-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+  }
+
+  .nav-search-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-decoration: none;
+    color: var(--color-nav-text);
+    margin-right: 4px;
+  }
+
+  .nav-search-trigger:hover {
+    background: #f0f0f0;
+    color: var(--color-nav-text-hover);
+  }
+
+  .nav-search-trigger i {
+    font-size: 14px;
+  }
+
+  .primary-nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4px;
+  }
+
+  .primary-nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-anchor-tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-nav-text);
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .nav-anchor-tag:hover {
+    background: #f5f5f5;
+    color: var(--color-nav-text-hover);
+  }
+
+  .nav-anchor-tag .nav-chevron-icon {
+    font-size: 9px;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-anchor-tag:hover .nav-chevron-icon {
+    transform: rotate(180deg);
+  }
+
+  .nav-rewards-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .rewards-anchor-tag {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-nav-text);
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .rewards-anchor-tag:hover {
+    background: #f5f5f5;
+    color: var(--color-nav-text-hover);
+  }
+
+  /* ─── CENTER SECTION ────────────────────────────────────────── */
+
+  .header-center-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .branding-anchor-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .brand-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+  }
+
+  .brand-logo-image {
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+  }
+
+  /* SVG Logo fallback (rendered inline if no image) */
+  .brand-logo-svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+  }
+
+  /* ─── RIGHT SECTION ─────────────────────────────────────────── */
+
+  .header-right-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .secondary-nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4px;
+  }
+
+  .secondary-nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .secondary-nav-link-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .secondary-anchor-tag {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-nav-text);
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .secondary-anchor-tag:hover {
+    background: #f5f5f5;
+    color: var(--color-nav-text-hover);
+  }
+
+  .nav-action-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 8px;
+  }
+
+  .nav-icon-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--color-nav-text);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-icon-action:hover {
+    background: #f0f0f0;
+    color: var(--color-nav-text-hover);
+  }
+
+  .nav-icon-action i {
+    font-size: 14px;
+  }
+
+  .cart-badge-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .cart-count-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 16px;
+    height: 16px;
+    background: var(--color-announce-bg);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 50%;
+    line-height: 1;
+  }
+
+  /* ─── DEMO SECTION BELOW HEADER ────────────────────────────── */
+  .demo-page-content {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 24px;
+    text-align: center;
+    color: #888;
+    font-family: var(--font-primary);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header-root">
+
+  <div class="announcement-bar">
+    <div class="announcement-viewport">
+      <ul class="announcement-track">
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-shipping-fast announcement-icon"></i>
+            <span>Free Shipping $99+</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-leaf announcement-icon"></i>
+            <span>100% Legal Cannabis</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-box-open announcement-icon"></i>
+            <span>Fast &amp; Discreet Shipping</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-smile announcement-icon"></i>
+            <span>135k+ Happy Customers</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-shipping-fast announcement-icon"></i>
+            <span>Free Shipping $99+</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-leaf announcement-icon"></i>
+            <span>100% Legal Cannabis</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-box-open announcement-icon"></i>
+            <span>Fast &amp; Discreet Shipping</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-smile announcement-icon"></i>
+            <span>135k+ Happy Customers</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-shipping-fast announcement-icon"></i>
+            <span>Free Shipping $99+</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-leaf announcement-icon"></i>
+            <span>100% Legal Cannabis</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-box-open announcement-icon"></i>
+            <span>Fast &amp; Discreet Shipping</span>
+          </div>
+        </li>
+        <li class="announcement-item">
+          <div class="announcement-text-wrapper">
+            <i class="fas fa-smile announcement-icon"></i>
+            <span>135k+ Happy Customers</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-header">
+    <div class="header-inner-container">
+
+      <div class="header-left-section">
+        <div>
+          <a href="#" class="nav-search-trigger">
+            <div>
+              <i class="fas fa-search"></i>
+            </div>
+          </a>
+        </div>
+        <nav>
+          <ul class="primary-nav-list">
+            <li class="primary-nav-item">
+              <div class="nav-link-wrapper">
+                <a href="#" class="nav-anchor-tag">
+                  <div>
+                    Shop
+
+                  </div>
+                  <div>
+                    <i class="fas fa-chevron-down nav-chevron-icon"></i>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="primary-nav-item">
+              <div class="nav-rewards-link">
+                <a href="#" class="rewards-anchor-tag">
+                  <div>
+                    Rewards
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-center-section">
+        <a href="#" class="branding-anchor-box">
+          <div class="brand-logo-wrapper">
+            <div class="brand-logo-svg-container">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="70" height="70">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="#1a1a1a" stroke-width="1.4"/>
+                <circle cx="60" cy="60" r="49" fill="none" stroke="#1a1a1a" stroke-width="0.6"/>
+                <text
+                  x="60"
+                  y="30"
+                  text-anchor="middle"
+                  font-family="'Barlow', sans-serif"
+                  font-size="7.5"
+                  font-weight="700"
+                  letter-spacing="3.5"
+                  fill="#1a1a1a"
+                  transform="rotate(-35, 60, 60)">ROTARY</text>
+                <text
+                  x="60"
+                  y="30"
+                  text-anchor="middle"
+                  font-family="'Barlow', sans-serif"
+                  font-size="7.5"
+                  font-weight="700"
+                  letter-spacing="3.5"
+                  fill="#1a1a1a"
+                  transform="rotate(145, 60, 60)">FARMS</text>
+                <text
+                  x="60"
+                  y="56"
+                  text-anchor="middle"
+                  font-family="'Cormorant Garamond', serif"
+                  font-size="9"
+                  font-weight="500"
+                  letter-spacing="1"
+                  fill="#1a1a1a">CRAFT</text>
+                <text
+                  x="60"
+                  y="70"
+                  text-anchor="middle"
+                  font-family="'Cormorant Garamond', serif"
+                  font-size="9"
+                  font-weight="500"
+                  letter-spacing="1"
+                  fill="#1a1a1a">CANNABIS</text>
+                <path d="M40,80 Q60,90 80,80" fill="none" stroke="#1a1a1a" stroke-width="0.8"/>
+                <path d="M40,42 Q60,32 80,42" fill="none" stroke="#1a1a1a" stroke-width="0.8"/>
+                <circle cx="60" cy="60" r="3" fill="none" stroke="#1a1a1a" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="header-right-section">
+        <nav>
+          <ul class="secondary-nav-list">
+            <li class="secondary-nav-item">
+              <div class="secondary-nav-link-wrapper">
+                <a href="About-us-page.html" class="secondary-anchor-tag">
+                  <div>
+                    About Us
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="secondary-nav-item">
+              <div class="secondary-nav-link-wrapper">
+                <a href="faq-section.html" class="secondary-anchor-tag">
+                  <div>
+                    FAQ
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-action-wrapper">
+          <div>
+            <a href="#" class="nav-icon-action">
+              <div>
+                <i class="fas fa-search"></i>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="nav-icon-action">
+              <div>
+                <i class="far fa-user"></i>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="nav-icon-action">
+              <div class="cart-badge-wrapper">
+                <div>
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+<div class="demo-page-content">
+  <p>— Page content renders below the header —</p>
+</div>
+
+</body>
+</html>
+<!-- image-baner -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BOGO Banner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* ── Main Wrapper ── */
+    .promo-banner-wrapper {
+      width: 100%;
+      max-width: 1300px;
+      margin: 50px auto;
+    }
+
+    /* ── Banner Section (Background Image) ── */
+    .promo-banner-section {
+      width: 100%;
+      min-height: 290px;
+      background-image: url('1.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 0 48px;
+      border-radius: 20px;
+    }
+
+    /* ── Text Content ── */
+    .promo-banner-content {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* ── Heading ── */
+    .promo-banner-heading {
+      color: #fff;
+    }
+
+    .promo-banner-heading h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    /* ── Offer Text ── */
+    .promo-banner-offer {
+      color: #fff;
+    }
+
+    .promo-banner-offer p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    /* ── Shipping Text ── */
+    .promo-banner-shipping {
+      color: #fff;
+    }
+
+    .promo-banner-shipping p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    /* ── Tablet ── */
+    @media (max-width: 1024px) {
+      .promo-banner-section {
+        height: 140px;
+        padding: 0 32px;
+        width: 100%;
+      }
+      .promo-banner-heading h2 {
+        font-size: 38px;
+      }
+      .promo-banner-offer p,
+      .promo-banner-shipping p {
+        font-size: 13px;
+      }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .promo-banner-section {
+        height: auto;
+        padding: 28px 20px;
+        background-position: right center;
+      }
+      .promo-banner-heading h2 {
+        font-size: 28px;
+      }
+      .promo-banner-offer p,
+      .promo-banner-shipping p {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="promo-banner-wrapper">
+    <div class="promo-banner-section">
+      <div class="promo-banner-content">
+
+        <div class="promo-banner-heading">
+          <h2>BOGO Free</h2>
+        </div>
+
+        <div class="promo-banner-offer">
+          <p>All Flower + Free 2 Count Gummies With Every Order</p>
+        </div>
+
+        <div class="promo-banner-shipping">
+          <p>Free Shipping On Orders Over $99</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!-- product-grid-section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Flower Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f5f0e8;
+    }
+
+    /* ═══════════════════════════
+       MAIN WRAPPER
+    ═══════════════════════════ */
+    .premium-flower-wrapper {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* ═══════════════════════════
+       TOP HEADER ROW
+    ═══════════════════════════ */
+    .premium-flower-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    /* ── Heading ── */
+    .premium-flower-heading {
+      border-top: 3px solid #1a6b8a;
+      padding-top: 8px;
+    }
+
+    .premium-flower-heading h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── Badges Row ── */
+    .premium-flower-badges {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .premium-flower-badge-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .premium-flower-badge-item .badge-icon {
+      width: 100%;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .premium-flower-badge-item .badge-icon img {
+      width: 98px;
+      height: 98px;
+    }
+
+    .premium-flower-badge-item .badge-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #333;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* ═══════════════════════════
+       PRODUCT GRID
+    ═══════════════════════════ */
+    .premium-flower-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    /* ═══════════════════════════
+       PRODUCT CARD
+    ═══════════════════════════ */
+    .product-card {
+      background: #fff;
+      border: 1px solid #e0d8cc;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Card Image ── */
+    .product-card-image {
+      width: 100%;
+      overflow: hidden;
+      background: #f9f6f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-card-image img {
+      transform: scale(1.04);
+    }
+
+    /* ── Card Body ── */
+    .product-card-body {
+      padding: 14px 14px 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+
+    /* ── Product Name ── */
+    .product-card-name {
+    }
+
+    .product-card-name h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.3;
+    }
+
+    /* ── Star Rating ── */
+    .product-card-rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .product-card-rating .stars {
+      display: flex;
+      gap: 1px;
+    }
+
+    .product-card-rating .stars span {
+      color: #f5a623;
+      font-size: 12px;
+    }
+
+    .product-card-rating .review-count {
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* ── Tags ── */
+    .product-card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .product-card-tags .tag {
+      font-size: 10px;
+      font-weight: 600;
+      color: #555;
+      background: #f0ebe0;
+      border: 1px solid #ddd5c2;
+      padding: 2px 8px;
+      border-radius: 2px;
+      text-transform: capitalize;
+    }
+
+    .product-card-tags .tag-thca {
+      color: #1a6b8a;
+      background: #e8f4f8;
+      border-color: #b8d8e5;
+    }
+
+    /* ── Shop Now Button ── */
+    .product-card-btn {
+      margin-top: 10px;
+    }
+
+    .product-card-btn a {
+      display: block;
+      width: 100%;
+      background: #1a6b8a;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .product-card-btn a:hover {
+      background: #145a75;
+    }
+
+    /* ── Free Gummies Note ── */
+    .product-card-note {
+      padding: 7px 14px 10px 14px;
+    }
+
+    .product-card-note p {
+      font-size: 10px;
+      color: #888;
+      text-align: center;
+    }
+
+    .product-card-note p span {
+      color: #1a6b8a;
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════
+       MEDIA QUERIES
+    ═══════════════════════════ */
+
+    /* Tablet - 2 columns */
+    @media (max-width: 1024px) {
+      .premium-flower-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .premium-flower-badge-item .badge-icon img {
+  width: 50px;
+  height: 50px;
+}
+      .premium-flower-heading h2 {
+        font-size: 26px;
+      }
+      .premium-flower-badges {
+        gap: 10px;
+      }
+      .premium-flower-badge-item .badge-icon {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    /* Mobile - 1 column */
+    @media (max-width: 600px) {
+      .premium-flower-header {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .premium-flower-badge-item .badge-icon img {
+  width: 50px;
+  height: 50px;
+}
+      .premium-flower-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 14px;
+      }
+      .premium-flower-heading h2 {
+        font-size: 22px;
+      }
+      .product-card-image {
+        height: 260px;
+      }
+      .premium-flower-badges {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="premium-flower-wrapper">
+
+  <!-- ── Header ── -->
+  <div class="premium-flower-header">
+
+    <div class="premium-flower-heading">
+      <h2>Premium Flower</h2>
+    </div>
+
+    <div class="premium-flower-badges">
+
+      <div class="premium-flower-badge-item">
+        <div class="badge-icon">
+          <img src="Living_Soil.png">
+        </div>
+      </div>
+
+      <div class="premium-flower-badge-item">
+        <div class="badge-icon">
+          <img src="Living_Soil.png">
+        </div>
+      </div>
+
+      <div class="premium-flower-badge-item">
+        <div class="badge-icon">
+         <img src="Living_Soil.png">
+        </div>
+      </div>
+
+      <div class="premium-flower-badge-item">
+        <div class="badge-icon">
+          <img src="Living_Soil.png">
+        </div>
+      </div>
+
+      <div class="premium-flower-badge-item">
+        <div class="badge-icon">
+          <img src="Living_Soil.png">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Product Grid ── -->
+  <div class="premium-flower-grid">
+
+    <!-- Card 1 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image.png" alt="Alaskan Rainbow THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Alaskan Rainbow THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Indica</div>
+          <div class="tag">Sleep</div>
+          <div class="tag tag-thca">THCA 88.5%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image(1).png" alt="Zoap THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Zoap THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Hybrid</div>
+          <div class="tag">Relax</div>
+          <div class="tag tag-thca">THCA 88.7%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image(2).png" alt="Cheetah Piss THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Cheetah Piss THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Indica</div>
+          <div class="tag">Sleep</div>
+          <div class="tag tag-thca">THCA 70.5%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image(3).png" alt="Purple Tangie THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Purple Tangie THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Indica</div>
+          <div class="tag">Sleep</div>
+          <div class="tag tag-thca">THCA 56.5%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image(4).png" alt="Pink Runtz THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Pink Runtz THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Indica</div>
+          <div class="tag">Sleep</div>
+          <div class="tag tag-thca">THCA 35.5%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image(5).png" alt="Crystal Candy THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Crystal Candy THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Hybrid</div>
+          <div class="tag">Relax</div>
+          <div class="tag tag-thca">THCA 18.2%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image(6).png" alt="Gorilla Skunk THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Gorilla Skunk THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Indica</div>
+          <div class="tag">Sleep</div>
+          <div class="tag tag-thca">THCA 25.5%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="product-card">
+      <div class="product-card-image">
+        <img src="image(7).png" alt="Skunk Fuel THCA"/>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">
+          <h3>Skunk Fuel THCA</h3>
+        </div>
+        <div class="product-card-rating">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="review-count">193 Reviews</div>
+        </div>
+        <div class="product-card-tags">
+          <div class="tag">Indica</div>
+          <div class="tag">Sleep</div>
+          <div class="tag tag-thca">THCA 55.5%</div>
+        </div>
+        <div class="product-card-btn">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+      <div class="product-card-note">
+        <p><span>✦ Free 2 Count Gummies</span> With Every Order</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+</body>
+</html>
+<!-- last-baner-image -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BOGO Banner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* ── Main Wrapper ── */
+    .promo-banner-wrapper-d345 {
+      width: 100%;
+      max-width: 1300px;
+      margin: 50px auto;
+    }
+
+    /* ── Banner Section (Background Image) ── */
+    .promo-banner-section-d345 {
+      width: 100%;
+      min-height: 290px;
+      background-image: url('Mask group.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 0 48px;
+      border-radius: 20px;
+    }
+
+    /* ── Text Content ── */
+    .promo-banner-content-d345 {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* ── Heading ── */
+    .promo-banner-heading-d345 {
+      color: #fff;
+    }
+
+    .promo-banner-heading-d345 h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    /* ── Offer Text ── */
+    .promo-banner-offer-d345 {
+      color: #fff;
+    }
+
+    .promo-banner-offer-d345 p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    /* ── Shipping Text ── */
+    .promo-banner-shipping-d345 {
+      color: #fff;
+    }
+
+    .promo-banner-shipping-d345 p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    /* ── Tablet ── */
+    @media (max-width: 1024px) {
+      .promo-banner-section-d345 {
+        height: 140px;
+        padding: 0 32px;
+        width: 100%;
+      }
+      .promo-banner-heading-d345 h2 {
+        font-size: 38px;
+      }
+      .promo-banner-offer-d345 p,
+      .promo-banner-shipping-d345 p {
+        font-size: 13px;
+      }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .promo-banner-section-d345 {
+        height: auto;
+        padding: 28px 20px;
+        background-position: right center;
+      }
+      .promo-banner-heading-d345 h2 {
+        font-size: 28px;
+      }
+      .promo-banner-offer-d345 p,
+      .promo-banner-shipping-d345 p {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="promo-banner-wrapper-d345">
+    <div class="promo-banner-section-d345">
+      <div class="promo-banner-content-d345">
+
+        <div class="promo-banner-heading-d345">
+          <h2>BOGO Free</h2>
+        </div>
+
+        <div class="promo-banner-offer-d345">
+          <p>All Flower + Free 2 Count Gummies With Every Order</p>
+        </div>
+
+        <div class="promo-banner-shipping-d345">
+          <p>Free Shipping On Orders Over $99</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!-- footer-section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Footer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      max-width: 1300px;
+      margin: 20px auto;
+    }
+
+    /* ═══════════════════════════════════
+       MARQUEE STRIP
+    ═══════════════════════════════════ */
+    .footer-marquee-wrapper {
+      width: 100%;
+      background: #f5f0e8;
+      padding: 18px 0;
+      overflow: hidden;
+      border-top: 1px solid #ddd5c2;
+    }
+
+    .footer-marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 18s linear infinite;
+    }
+
+    .footer-marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .footer-marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 32px;
+      white-space: nowrap;
+    }
+
+    .footer-marquee-item span {
+      font-family: 'Oswald', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-marquee-item .marquee-icon {
+      color: #c9a96e;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    /* ═══════════════════════════════════
+       FOOTER MAIN
+    ═══════════════════════════════════ */
+    .footer-main {
+      width: 100%;
+      background: #1a2744;
+    }
+
+    /* ── Footer Inner Wrapper ── */
+    .footer-inner-wrapper {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 60px 40px 30px 40px;
+    }
+
+    /* ── Footer Top Row ── */
+    .footer-top-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr 1.6fr;
+      gap: 30px;
+      padding-bottom: 40px;
+    }
+
+    /* ── Newsletter Col ── */
+    .footer-newsletter-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-newsletter-heading {
+    }
+
+    .footer-newsletter-heading h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .footer-newsletter-form {
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .footer-newsletter-form .form-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .footer-newsletter-form .form-input::placeholder {
+      color: rgba(255,255,255,0.45);
+    }
+
+    .footer-newsletter-form .form-btn {
+      background: rgba(255,255,255,0.12);
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .footer-newsletter-form .form-btn:hover {
+      background: rgba(255,255,255,0.22);
+    }
+
+    /* ── Footer Nav Col ── */
+    .footer-nav-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-nav-col-heading {
+    }
+
+    .footer-nav-col-heading h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .footer-nav-col-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-nav-col-links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: color 0.2s;
+      line-height: 1;
+    }
+
+    .footer-nav-col-links a:hover {
+      color: #c9a96e;
+    }
+
+    /* ── Disclaimer Col ── */
+    .footer-disclaimer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-disclaimer-heading h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .footer-disclaimer-text p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    .footer-disclaimer-states {
+      margin-top: 4px;
+    }
+
+    .footer-disclaimer-states p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* ── Divider ── */
+    .footer-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ── Footer Bottom Row ── */
+    .footer-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 22px;
+    }
+
+    /* ── Copyright ── */
+    .footer-copyright {
+    }
+
+    .footer-copyright p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── Payment Icons ── */
+    .footer-payment-icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-payment-icons .payment-icon {
+      width: 40px;
+      height: 26px;
+      background: #fff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .footer-payment-icons .payment-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 3px;
+    }
+
+    /* ── Corner Ornaments ── */
+    .footer-ornament-left {
+      position: absolute;
+      bottom: 30px;
+      left: 20px;
+      opacity: 0.25;
+    }
+
+    .footer-ornament-right {
+      position: absolute;
+      bottom: 30px;
+      right: 20px;
+      opacity: 0.25;
+    }
+
+    .footer-main {
+      position: relative;
+    }
+
+    /* ═══════════════════════════════════
+       MEDIA QUERIES
+    ═══════════════════════════════════ */
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .footer-top-row {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+      }
+      .footer-newsletter-col {
+        grid-column: 1 / -1;
+      }
+      .footer-disclaimer-col {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .footer-inner-wrapper {
+        padding: 40px 20px 24px 20px;
+      }
+      .footer-top-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .footer-newsletter-col {
+        grid-column: 1 / -1;
+      }
+      .footer-disclaimer-col {
+        grid-column: 1 / -1;
+      }
+      .footer-bottom-row {
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .footer-marquee-item span {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       MARQUEE STRIP
+  ═══════════════════════════════════ -->
+  <div class="footer-marquee-wrapper">
+    <div class="footer-marquee-track">
+
+      <!-- First copy -->
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+
+      <!-- Duplicate copy for seamless loop -->
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+      <div class="footer-marquee-item">
+        <span>Peace Delivered Daily</span>
+        <div class="marquee-icon">❖</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       FOOTER MAIN
+  ═══════════════════════════════════ -->
+  <footer class="footer-main">
+
+    <div class="footer-inner-wrapper">
+
+      <!-- ── Top Row ── -->
+      <div class="footer-top-row">
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter-col">
+          <div class="footer-newsletter-heading">
+            <h3>The Latest News<br>Straight To Your<br>Inbox.</h3>
+          </div>
+          <div class="footer-newsletter-form">
+            <input class="form-input" type="email" placeholder="E-mail" />
+            <button class="form-btn">&#8594;</button>
+          </div>
+        </div>
+
+        <!-- Learn -->
+        <div class="footer-nav-col">
+          <div class="footer-nav-col-heading">
+            <h4>Learn</h4>
+          </div>
+          <div class="footer-nav-col-links">
+            <a href="About-us-page.html">About Us</a>
+            <a href="reward-page.html">Rewards</a>
+            <a href="Reviews.html">Reviews</a>
+            <a href="Affiliates.html">Affiliates</a>
+            <a href="Coupons.html">Coupons</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Store Locator.html">Store Locator</a>
+          </div>
+        </div>
+
+        <!-- Get Help -->
+        <div class="footer-nav-col">
+          <div class="footer-nav-col-heading">
+            <h4>Get Help</h4>
+          </div>
+          <div class="footer-nav-col-links">
+            <a href="faq-section.html">FAQ</a>
+            <a href="Contact Us.html">Contact Us</a>
+            <a href="Instagram.html">Instagram</a>
+            <a href="COA Documents.html">COA Documents</a>
+            <a href="Wholesale Login.html">Wholesale Login</a>
+          </div>
+        </div>
+
+        <!-- Legal Pages -->
+        <div class="footer-nav-col">
+          <div class="footer-nav-col-heading">
+            <h4>Legal Pages</h4>
+          </div>
+          <div class="footer-nav-col-links">
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms of Service.html">Terms of Service</a>
+            <a href="Refund Policy.html">Refund Policy</a>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="footer-disclaimer-col">
+          <div class="footer-disclaimer-heading">
+            <h4>Disclaimer</h4>
+          </div>
+          <div class="footer-disclaimer-text">
+            <p>This site is intended for use by persons 21 or older only. Our products are not approved by the FDA to diagnose, treat, prevent, or cure any illnesses. All products contain less than 0.3% hemp derived Delta 9 THC in compliance with the 2018 Farm Bill.</p>
+          </div>
+          <div class="footer-disclaimer-states">
+            <p>*These products are not available for shipment to the following states: Arkansas, Hawaii, Idaho, Kansas, Louisiana, Oklahoma, Oregon, Rhode Island, Utah, Vermont.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Divider ── -->
+      <div class="footer-divider"></div>
+
+      <!-- ── Bottom Row ── -->
+      <div class="footer-bottom-row">
+
+        <div class="footer-copyright">
+          <p>© 2025, Botany Farms.</p>
+        </div>
+
+        <div class="footer-payment-icons">
+
+          <div class="payment-icon">
+            <!-- American Express -->
+            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24">
+              <rect width="38" height="24" rx="3" fill="#2557D6"/>
+              <text x="19" y="16" font-size="8" font-family="Arial" font-weight="bold" fill="#fff" text-anchor="middle">AMEX</text>
+            </svg>
+          </div>
+
+          <div class="payment-icon">
+            <!-- Diners -->
+            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24">
+              <rect width="38" height="24" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
+              <circle cx="15" cy="12" r="7" fill="none" stroke="#004A97" stroke-width="1.5"/>
+              <circle cx="23" cy="12" r="7" fill="none" stroke="#004A97" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <div class="payment-icon">
+            <!-- Discover -->
+            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24">
+              <rect width="38" height="24" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
+              <circle cx="26" cy="12" r="8" fill="#FF6600"/>
+              <text x="6" y="16" font-size="6.5" font-family="Arial" font-weight="bold" fill="#231F20">DIS</text>
+            </svg>
+          </div>
+
+          <div class="payment-icon">
+            <!-- JCB -->
+            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24">
+              <rect width="38" height="24" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
+              <rect x="6"  y="5" width="8" height="14" rx="3" fill="#0E4C96"/>
+              <rect x="15" y="5" width="8" height="14" rx="3" fill="#E31837"/>
+              <rect x="24" y="5" width="8" height="14" rx="3" fill="#007B40"/>
+            </svg>
+          </div>
+
+          <div class="payment-icon">
+            <!-- Mastercard -->
+            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24">
+              <rect width="38" height="24" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
+              <circle cx="15" cy="12" r="7" fill="#EB001B"/>
+              <circle cx="23" cy="12" r="7" fill="#F79E1B"/>
+              <path d="M19 6.8a7 7 0 0 1 0 10.4A7 7 0 0 1 19 6.8z" fill="#FF5F00"/>
+            </svg>
+          </div>
+
+          <div class="payment-icon">
+            <!-- Visa -->
+            <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24">
+              <rect width="38" height="24" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
+              <text x="19" y="16" font-size="10" font-family="Arial" font-weight="bold" fill="#1A1F71" text-anchor="middle">VISA</text>
+            </svg>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Corner Ornaments -->
+    <div class="footer-ornament-left">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 70 Q40 10 70 10" stroke="#c9a96e" stroke-width="1" fill="none"/>
+        <path d="M10 60 Q35 15 65 10" stroke="#c9a96e" stroke-width="0.5" fill="none"/>
+        <circle cx="10" cy="70" r="3" fill="#c9a96e"/>
+        <circle cx="70" cy="10" r="3" fill="#c9a96e"/>
+      </svg>
+    </div>
+
+    <div class="footer-ornament-right">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70 70 Q40 10 10 10" stroke="#c9a96e" stroke-width="1" fill="none"/>
+        <path d="M70 60 Q45 15 15 10" stroke="#c9a96e" stroke-width="0.5" fill="none"/>
+        <circle cx="70" cy="70" r="3" fill="#c9a96e"/>
+        <circle cx="10" cy="10" r="3" fill="#c9a96e"/>
+      </svg>
+    </div>
+
+  </footer>
+
+</body>
+</html>

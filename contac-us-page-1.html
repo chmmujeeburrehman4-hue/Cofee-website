@@ -1,0 +1,499 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.custom-main-ue4r-d345{
+    width: 100%;
+}
+.custom-inner-ue4r-d345{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+.custom-header-ue4r-d345{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #3d0c11;
+    min-height: 70px;
+    gap: 16px;
+}
+.logo-cofee-d345{
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+.logo-cofee-d345 svg{
+    width: 36px;
+    height: 36px;
+}
+.logo-cof-text-d345 span{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-right: auto;
+}
+.nav-links{
+    margin-left: auto;
+}
+.links-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+    align-items: center;
+}
+.links-menu li{
+    list-style: none;
+}
+.links-menu a{
+    color: #ccc;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding: 7px 18px;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+    cursor: pointer;
+}
+.links-menu a.active,
+.links-menu a:hover{
+    background: #e08a1e;
+    color: #fff;
+}
+
+/* Hamburger Button */
+.hamburger-btn-ue4r-d345{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+}
+.hamburger-btn-ue4r-d345 span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+
+/* ========== 1024px ========== */
+@media (max-width: 1024px){
+    .custom-header-ue4r-d345{
+        padding: 14px 0px;
+        gap: 12px;
+    }
+    .links-menu{
+        gap: 2px;
+    }
+    .links-menu a{
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+    .logo-cof-text-d345 span{
+        font-size: 18px;
+    }
+}
+
+
+/* ========== 768px ========== */
+@media (max-width: 768px){
+    .custom-header-ue4r-d345{
+        position: relative;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 10px;
+        min-height: 60px;
+    }
+    .hamburger-btn-ue4r-d345{
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        background: #2c1810;
+        margin-left: 0px;
+        z-index: 999;
+    }
+    .nav-links.open-menu-ue4r-d345{
+        display: block;
+    }
+    .links-menu{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
+    .links-menu li{
+        width: 100%;
+        border-bottom: 1px solid #ffffff10;
+    }
+    .links-menu a{
+        display: block;
+        width: 100%;
+        border-radius: 0px;
+        padding: 14px 20px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+    .logo-cof-text-d345 span{
+        font-size: 18px;
+    }
+}
+
+
+/* ========== 480px ========== */
+@media (max-width: 480px){
+    .custom-header-ue4r-d345{
+        min-height: 55px;
+        gap: 8px;
+    }
+    .logo-cofee-d345{
+        width: 30px;
+        height: 30px;
+    }
+    .logo-cofee-d345 svg{
+        width: 30px;
+        height: 30px;
+    }
+    .logo-cof-text-d345 span{
+        font-size: 16px;
+    }
+    .nav-links{
+        top: 55px;
+    }
+    .links-menu a{
+        font-size: 14px;
+        padding: 13px 16px;
+    }
+}
+</style>
+
+<div class="custom-main-ue4r-d345">
+    <div class="custom-inner-ue4r-d345">
+        <div class="custom-header-ue4r-d345">
+            <div class="logo-cofee-d345">
+                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
+                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
+                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
+                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
+                </svg>
+            </div>
+            <div class="logo-cof-text-d345">
+                <span>Coffee</span>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links-ue4r-d345">
+                <div class="links-menu">
+                    <li><a href="cofee-theme-website.html" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
+                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
+                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
+                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var hamburger = document.getElementById('hamburger-ue4r-d345');
+    var navLinks = document.getElementById('nav-links-ue4r-d345');
+
+    hamburger.addEventListener('click', function(){
+        navLinks.classList.toggle('open-menu-ue4r-d345');
+    });
+
+    var allLinks = document.querySelectorAll('.nav-link');
+    allLinks.forEach(function(link){
+        link.addEventListener('click', function(){
+            navLinks.classList.remove('open-menu-ue4r-d345');
+        });
+    });
+</script>
+<style>
+.contact-main-88-d345{
+    width: 100%;
+    background-color: #fdf6f0;
+       max-width: 1300px;
+    margin: 0px auto;
+    min-height: 455px;
+  overflow-x: hidden;
+}
+.contact-inner-88-d345{
+    width: 100%;
+      padding: 20px 15px;
+}
+.contact-heading-top-88-d345{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.contact-heading-top-88-d345 h2{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c1810;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px 0px 12px 0px;
+}
+.contact-heading-top-88-d345::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e08a1e;
+    margin: 0px auto;
+    border-radius: 2px;
+}
+.contact-flex-88-d345{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+.contact-info-88-d345{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.contact-info-row-88-d345{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.contact-info-row-88-d345 svg{
+    width: 22px;
+    height: 22px;
+    stroke: #2c1810;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+.contact-info-row-88-d345 span{
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #2c1810;
+    line-height: 1.6;
+}
+.contact-form-88-d345{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contact-form-88-d345 input,
+.contact-form-88-d345 textarea{
+    width: 95%;
+    border: 1px solid #e0d6cf;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #2c1810;
+    background-color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    transition: border 0.2s;
+    margin: 0px;
+    display: block;
+}
+.contact-form-88-d345 input{
+    line-height: 48px;
+    text-indent: 14px;
+}
+.contact-form-88-d345 textarea{
+    min-height: 130px;
+    resize: none;
+    text-indent: 14px;
+    line-height: 2;
+}
+.contact-form-88-d345 input::placeholder,
+.contact-form-88-d345 textarea::placeholder{
+    color: #aaaaaa;
+}
+.contact-form-88-d345 input:focus,
+.contact-form-88-d345 textarea:focus{
+    border: 1px solid #e08a1e;
+}
+.contact-submit-btn-88-d345{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 4px;
+}
+.contact-submit-btn-88-d345 button{
+    background-color: #2c1810;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+    line-height: 46px;
+    width: 130px;
+    text-align: center;
+    display: block;
+}
+.contact-submit-btn-88-d345 button:hover{
+    background-color: #e08a1e;
+}
+
+
+/* ========== 1024px ========== */
+@media (max-width: 1024px){
+    .contact-flex-88-d345{
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+    .contact-heading-top-88-d345{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .contact-heading-top-88-d345 h2{
+        font-size: 28px;
+    }
+}
+
+
+/* ========== 768px ========== */
+@media (max-width: 768px){
+    .contact-inner-88-d345{
+        /*margin: 0px 30px;*/
+    }
+    .contact-flex-88-d345{
+        flex-direction: column;
+        gap: 36px;
+        margin-bottom: 40px;
+    }
+    .contact-info-88-d345{
+        width: 100%;
+    }
+    .contact-form-88-d345{
+        width: 100%;
+    }
+    .contact-heading-top-88-d345 h2{
+        font-size: 26px;
+    }
+}
+
+
+/* ========== 480px ========== */
+@media (max-width: 480px){
+    .contact-inner-88-d345{
+        margin: 0px 20px;
+    }
+    .contact-heading-top-88-d345{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .contact-heading-top-88-d345 h2{
+        font-size: 22px;
+    }
+    .contact-info-row-88-d345 span{
+        font-size: 13px;
+    }
+    .contact-form-88-d345 input{
+        font-size: 13px;
+    }
+    .contact-form-88-d345 textarea{
+        font-size: 13px;
+    }
+    .contact-submit-btn-88-d345 button{
+        font-size: 14px;
+    }
+}
+</style>
+
+<div class="contact-main-88-d345">
+    <div class="contact-inner-88-d345">
+
+        <div class="contact-heading-top-88-d345">
+            <h2>Contact Us</h2>
+        </div>
+
+        <div class="contact-flex-88-d345">
+
+            <!-- Left Info -->
+            <div class="contact-info-88-d345">
+
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#2c1810" stroke="none"/></svg>
+                    <span>123 Campsite Avenue, Wilderness, CA 98765</span>
+                </div>
+
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+                    <span>info@coffeeshopwebsite.com</span>
+                </div>
+
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" fill="#2c1810" stroke="none"/></svg>
+                    <span>(123) 456-78909</span>
+                </div>
+
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
+                </div>
+
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Saturday: 10:00 AM - 3:00 PM</span>
+                </div>
+
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Sunday: Closed</span>
+                </div>
+
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    <span>www.codingnepalweb.com</span>
+                </div>
+
+            </div>
+
+            <!-- Right Form -->
+            <div class="contact-form-88-d345">
+                <input type="text" placeholder="Your name">
+                <input type="email" placeholder="Your email">
+                <textarea placeholder="Your message"></textarea>
+                <div class="contact-submit-btn-88-d345">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

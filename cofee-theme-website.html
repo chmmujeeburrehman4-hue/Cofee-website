@@ -1,0 +1,446 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.custom-main-ue4r-d345{
+    width: 100%;
+}
+.custom-inner-ue4r-d345{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+.custom-header-ue4r-d345{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #3d0c11;
+    min-height: 70px;
+    gap: 16px;
+}
+.logo-cofee-d345{
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+.logo-cofee-d345 svg{
+    width: 36px;
+    height: 36px;
+}
+.logo-cof-text-d345 span{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-right: auto;
+}
+.nav-links{
+    margin-left: auto;
+}
+.links-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+    align-items: center;
+}
+.links-menu li{
+    list-style: none;
+}
+.links-menu a{
+    color: #ccc;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding: 7px 18px;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+    cursor: pointer;
+}
+.links-menu a.active,
+.links-menu a:hover{
+    background: #e08a1e;
+    color: #fff;
+}
+
+/* Hamburger Button */
+.hamburger-btn-ue4r-d345{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+}
+.hamburger-btn-ue4r-d345 span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+
+/* ========== 1024px ========== */
+@media (max-width: 1024px){
+    .custom-header-ue4r-d345{
+        padding: 14px 0px;
+        gap: 12px;
+    }
+    .links-menu{
+        gap: 2px;
+    }
+    .links-menu a{
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+    .logo-cof-text-d345 span{
+        font-size: 18px;
+    }
+}
+
+
+/* ========== 768px ========== */
+@media (max-width: 768px){
+    .custom-header-ue4r-d345{
+        position: relative;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 10px;
+        min-height: 60px;
+    }
+    .hamburger-btn-ue4r-d345{
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        background: #2c1810;
+        margin-left: 0px;
+        z-index: 999;
+    }
+    .nav-links.open-menu-ue4r-d345{
+        display: block;
+    }
+    .links-menu{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
+    .links-menu li{
+        width: 100%;
+        border-bottom: 1px solid #ffffff10;
+    }
+    .links-menu a{
+        display: block;
+        width: 100%;
+        border-radius: 0px;
+        padding: 14px 20px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+    .logo-cof-text-d345 span{
+        font-size: 18px;
+    }
+}
+
+
+/* ========== 480px ========== */
+@media (max-width: 480px){
+    .custom-header-ue4r-d345{
+        min-height: 55px;
+        gap: 8px;
+    }
+    .logo-cofee-d345{
+        width: 30px;
+        height: 30px;
+    }
+    .logo-cofee-d345 svg{
+        width: 30px;
+        height: 30px;
+    }
+    .logo-cof-text-d345 span{
+        font-size: 16px;
+    }
+    .nav-links{
+        top: 55px;
+    }
+    .links-menu a{
+        font-size: 14px;
+        padding: 13px 16px;
+    }
+}
+</style>
+
+<div class="custom-main-ue4r-d345">
+    <div class="custom-inner-ue4r-d345">
+        <div class="custom-header-ue4r-d345">
+            <div class="logo-cofee-d345">
+                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
+                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
+                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
+                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
+                </svg>
+            </div>
+            <div class="logo-cof-text-d345">
+                <span>Coffee</span>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links-ue4r-d345">
+                <div class="links-menu">
+                    <li><a href="cofee-theme-website.html" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
+                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
+                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
+                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var hamburger = document.getElementById('hamburger-ue4r-d345');
+    var navLinks = document.getElementById('nav-links-ue4r-d345');
+
+    hamburger.addEventListener('click', function(){
+        navLinks.classList.toggle('open-menu-ue4r-d345');
+    });
+
+    var allLinks = document.querySelectorAll('.nav-link');
+    allLinks.forEach(function(link){
+        link.addEventListener('click', function(){
+            navLinks.classList.remove('open-menu-ue4r-d345');
+        });
+    });
+</script>
+<!-- cofee-image-baner -->
+<style>
+.baner-cofee-main-44-d345{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+    overflow-x: hidden;
+    background-color: #3d0c11;
+}
+.baner-cofee-inner-44-d345{
+    width: 100%;
+}
+.baner-cofee-baner-image-flex-44-d345{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+}
+.baner-text-4jei-d345{
+    width: 50%;
+}
+.baner-heading-d345 h2{
+    font-family: cursive;
+    color: #e08a1e;
+    font-size: 32px;
+    margin: 0px 0px 16px 0px;
+    font-weight: 600;
+}
+.baner-span-d345 span{
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    display: block;
+    margin-bottom: 18px;
+}
+.baner-para-disc-d345 p{
+    font-family: sans-serif;
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0px 0px 32px 0px;
+    max-width: 380px;
+}
+.baner-button-j43j-d345{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.button-d345 a{
+    background-color: #e08a1e;
+    color:  #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background 0.2s;
+}
+.button-d345 a:hover{
+    background-color: #c97a10;
+}
+.button-irih-d345 a{
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 11px 28px;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+}
+.button-irih-d345 a:hover{
+    background-color: #c97a10;
+    color: #3d0c11;
+}
+.baner-image-erh-d345{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.baner-image-erh-d345 img{
+    width: 100%;
+    max-width: 480px;
+    object-fit: contain;
+}
+
+
+/* ========== 1024px ========== */
+@media (max-width: 1024px){
+    .baner-cofee-baner-image-flex-44-d345{
+        padding: 60px 30px;
+    }
+    .baner-text-4jei-d345{
+        width: 52%;
+    }
+    .baner-image-erh-d345{
+        width: 44%;
+    }
+    .baner-heading-d345 h2{
+        font-size: 28px;
+    }
+    .baner-span-d345 span{
+        font-size: 28px;
+    }
+    .baner-para-disc-d345 p{
+        font-size: 14px;
+    }
+}
+
+
+/* ========== 768px ========== */
+@media (max-width: 768px){
+    .baner-cofee-baner-image-flex-44-d345{
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .baner-text-4jei-d345{
+        width: 100%;
+    }
+    .baner-image-erh-d345{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .baner-image-erh-d345 img{
+        max-width: 380px;
+    }
+    .baner-heading-d345 h2{
+        font-size: 26px;
+    }
+    .baner-span-d345 span{
+        font-size: 23px;
+        max-width: 100%;
+    }
+    .baner-para-disc-d345 p{
+        font-size: 17px;
+        max-width: 100%;
+    }
+    .baner-button-j43j-d345{
+        justify-content: center;
+    }
+}
+
+
+/* ========== 480px ========== */
+@media (max-width: 480px){
+    .baner-cofee-baner-image-flex-44-d345{
+        padding: 40px 0px;
+    }
+    .baner-heading-d345 h2{
+        font-size: 22px;
+    }
+    .baner-span-d345 span{
+        font-size: 21px;
+    }
+    .baner-para-disc-d345 p{
+        font-size: 17px;
+    }
+    .baner-image-erh-d345 img{
+        max-width: 280px;
+    }
+    .button-d345 a,
+    .button-irih-d345 a{
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+    .baner-button-j43j-d345{
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+}
+</style>
+
+<div class="baner-cofee-main-44-d345">
+    <div class="baner-cofee-inner-44-d345">
+        <div class="baner-cofee-baner-image-flex-44-d345">
+            <div class="baner-text-4jei-d345">
+                <div class="baner-heading-d345">
+                    <h2>Best Coffee</h2>
+                </div>
+                <div class="baner-span-d345">
+                    <span>Make your day great with our special coffee!</span>
+                </div>
+                <div class="baner-para-disc-d345">
+                    <p>Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy</p>
+                </div>
+                <div class="baner-button-j43j-d345">
+                    <div class="button-d345">
+                        <a href="#">Order Now</a>
+                    </div>
+                    <div class="button-irih-d345">
+                        <a href="contac-us-page-1.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="baner-image-erh-d345">
+                <img src="coffee-hero-section.png" alt="Coffee">
+            </div>
+        </div>
+    </div>
+</div>
