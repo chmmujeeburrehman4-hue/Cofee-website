@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+/* ===== NAVBAR ===== */
 .custom-main-ue4r-d345{
     width: 100%;
 }
@@ -62,8 +66,6 @@
     background: #e08a1e;
     color: #fff;
 }
-
-/* Hamburger Button */
 .hamburger-btn-ue4r-d345{
     display: none;
     flex-direction: column;
@@ -85,157 +87,32 @@
     border-radius: 2px;
     transition: all 0.3s;
 }
-
-
-/* ========== 1024px ========== */
 @media (max-width: 1024px){
-    .custom-header-ue4r-d345{
-        padding: 14px 0px;
-        gap: 12px;
-    }
-    .links-menu{
-        gap: 2px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 7px 14px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
+    .custom-header-ue4r-d345{ padding: 14px 0px; gap: 12px; }
+    .links-menu{ gap: 2px; }
+    .links-menu a{ font-size: 14px; padding: 7px 14px; }
+    .logo-cof-text-d345 span{ font-size: 18px; }
 }
-
-
-/* ========== 768px ========== */
 @media (max-width: 768px){
-    .custom-header-ue4r-d345{
-        position: relative;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 10px;
-        min-height: 60px;
-    }
-    .hamburger-btn-ue4r-d345{
-        display: flex;
-    }
-    .nav-links{
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0px;
-        width: 100%;
-        background: #2c1810;
-        margin-left: 0px;
-        z-index: 999;
-    }
-    .nav-links.open-menu-ue4r-d345{
-        display: block;
-    }
-    
-    .links-menu{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-    }
-    .links-menu li{
-        width: 100%;
-        border-bottom: 1px solid #ffffff10;
-    }
-    .links-menu a{
-        display: block;
-        width: 100%;
-        border-radius: 0px;
-        padding: 14px 20px;
-        font-size: 15px;
-        box-sizing: border-box;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
+    .custom-header-ue4r-d345{ position: relative; flex-wrap: nowrap; justify-content: flex-start; gap: 10px; min-height: 60px; }
+    .hamburger-btn-ue4r-d345{ display: flex; }
+    .nav-links{ display: none; position: absolute; top: 60px; left: 0px; width: 100%; background: #2c1810; margin-left: 0px; z-index: 999; }
+    .nav-links.open-menu-ue4r-d345{ display: block; }
+    .links-menu{ flex-direction: column; align-items: flex-start; gap: 0px; }
+    .links-menu li{ width: 100%; border-bottom: 1px solid #ffffff10; }
+    .links-menu a{ display: block; width: 100%; border-radius: 0px; padding: 14px 20px; font-size: 15px; box-sizing: border-box; }
+    .logo-cof-text-d345 span{ font-size: 18px; }
 }
-
-
-/* ========== 480px ========== */
 @media (max-width: 480px){
-    .custom-header-ue4r-d345{
-        min-height: 55px;
-        gap: 8px;
-    }
-    .logo-cofee-d345{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cofee-d345 svg{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 16px;
-    }
-    .nav-links{
-        top: 55px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 13px 16px;
-    }
+    .custom-header-ue4r-d345{ min-height: 55px; gap: 8px; }
+    .logo-cofee-d345{ width: 30px; height: 30px; }
+    .logo-cofee-d345 svg{ width: 30px; height: 30px; }
+    .logo-cof-text-d345 span{ font-size: 16px; }
+    .nav-links{ top: 55px; }
+    .links-menu a{ font-size: 14px; padding: 13px 16px; }
 }
-</style>
 
-<div class="custom-main-ue4r-d345">
-    <div class="custom-inner-ue4r-d345">
-        <div class="custom-header-ue4r-d345">
-            <div class="logo-cofee-d345">
-                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
-                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
-                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
-                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
-                </svg>
-            </div>
-            <div class="logo-cof-text-d345">
-                <span>Coffee</span>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="nav-links-ue4r-d345">
-                <div class="links-menu">
-                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
-                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
-                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
-                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
-                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<script>
-    var hamburger = document.getElementById('hamburger-ue4r-d345');
-    var navLinks = document.getElementById('nav-links-ue4r-d345');
-
-    hamburger.addEventListener('click', function(){
-        navLinks.classList.toggle('open-menu-ue4r-d345');
-    });
-
-    var allLinks = document.querySelectorAll('.nav-link');
-    allLinks.forEach(function(link){
-        link.addEventListener('click', function(){
-            navLinks.classList.remove('open-menu-ue4r-d345');
-        });
-    });
-</script>
-<!-- cofee-image-baner -->
-<style>
+/* ===== BANNER ===== */
 .baner-cofee-main-44-d345{
     width: 100%;
     max-width: 1300px;
@@ -243,9 +120,7 @@
     overflow-x: hidden;
     background-color: #3d0c11;
 }
-.baner-cofee-inner-44-d345{
-    width: 100%;
-}
+.baner-cofee-inner-44-d345{ width: 100%; }
 .baner-cofee-baner-image-flex-44-d345{
     width: 100%;
     display: flex;
@@ -253,9 +128,7 @@
     justify-content: space-between;
     padding: 80px 60px;
 }
-.baner-text-4jei-d345{
-    width: 50%;
-}
+.baner-text-4jei-d345{ width: 50%; }
 .baner-heading-d345 h2{
     font-family: cursive;
     color: #e08a1e;
@@ -280,14 +153,10 @@
     margin: 0px 0px 32px 0px;
     max-width: 380px;
 }
-.baner-button-j43j-d345{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
+.baner-button-j43j-d345{ display: flex; align-items: center; gap: 16px; }
 .button-d345 a{
     background-color: #e08a1e;
-    color:  #ffffff;
+    color: #ffffff;
     text-decoration: none;
     font-family: sans-serif;
     font-size: 15px;
@@ -297,9 +166,7 @@
     display: inline-block;
     transition: background 0.2s;
 }
-.button-d345 a:hover{
-    background-color: #c97a10;
-}
+.button-d345 a:hover{ background-color: #c97a10; }
 .button-irih-d345 a{
     background-color: transparent;
     color: #ffffff;
@@ -313,110 +180,415 @@
     display: inline-block;
     transition: background 0.2s, color 0.2s;
 }
-.button-irih-d345 a:hover{
-    background-color: #c97a10;
-    color: #3d0c11;
-}
-.baner-image-erh-d345{
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.baner-image-erh-d345 img{
-    width: 100%;
-    max-width: 480px;
-    object-fit: contain;
-}
-
-
-/* ========== 1024px ========== */
+.button-irih-d345 a:hover{ background-color: #c97a10; color: #3d0c11; }
+.baner-image-erh-d345{ width: 45%; display: flex; justify-content: center; align-items: center; }
+.baner-image-erh-d345 img{ width: 100%; max-width: 480px; object-fit: contain; }
 @media (max-width: 1024px){
-    .baner-cofee-baner-image-flex-44-d345{
-        padding: 60px 30px;
-    }
-    .baner-text-4jei-d345{
-        width: 52%;
-    }
-    .baner-image-erh-d345{
-        width: 44%;
-    }
-    .baner-heading-d345 h2{
-        font-size: 28px;
-    }
-    .baner-span-d345 span{
-        font-size: 28px;
-    }
-    .baner-para-disc-d345 p{
-        font-size: 14px;
-    }
+    .baner-cofee-baner-image-flex-44-d345{ padding: 60px 30px; }
+    .baner-text-4jei-d345{ width: 52%; }
+    .baner-image-erh-d345{ width: 44%; }
+    .baner-heading-d345 h2{ font-size: 28px; }
+    .baner-span-d345 span{ font-size: 28px; }
+    .baner-para-disc-d345 p{ font-size: 14px; }
 }
-
-
-/* ========== 768px ========== */
 @media (max-width: 768px){
-    .baner-cofee-baner-image-flex-44-d345{
-        flex-direction: column;
-        padding: 50px 20px;
-        text-align: center;
-    }
-    .baner-text-4jei-d345{
-        width: 100%;
-    }
-    .baner-image-erh-d345{
-        width: 100%;
-        margin-top: 40px;
-    }
-    .baner-image-erh-d345 img{
-        max-width: 380px;
-    }
-    .baner-heading-d345 h2{
-        font-size: 26px;
-    }
-    .baner-span-d345 span{
-        font-size: 23px;
-        max-width: 100%;
-    }
-    .baner-para-disc-d345 p{
-        font-size: 17px;
-        max-width: 100%;
-    }
-    .baner-button-j43j-d345{
-        justify-content: center;
-    }
+    .baner-cofee-baner-image-flex-44-d345{ flex-direction: column; padding: 50px 20px; text-align: center; }
+    .baner-text-4jei-d345{ width: 100%; }
+    .baner-image-erh-d345{ width: 100%; margin-top: 40px; }
+    .baner-image-erh-d345 img{ max-width: 380px; }
+    .baner-heading-d345 h2{ font-size: 26px; }
+    .baner-span-d345 span{ font-size: 23px; max-width: 100%; }
+    .baner-para-disc-d345 p{ font-size: 17px; max-width: 100%; }
+    .baner-button-j43j-d345{ justify-content: center; }
+}
+@media (max-width: 480px){
+    .baner-cofee-baner-image-flex-44-d345{ padding: 40px 0px; }
+    .baner-heading-d345 h2{ font-size: 22px; }
+    .baner-span-d345 span{ font-size: 21px; }
+    .baner-para-disc-d345 p{ font-size: 17px; }
+    .baner-image-erh-d345 img{ max-width: 280px; }
+    .button-d345 a, .button-irih-d345 a{ font-size: 13px; padding: 10px 20px; }
+    .baner-button-j43j-d345{ flex-direction: column; gap: 12px; align-items: center; }
 }
 
-
-/* ========== 480px ========== */
+/* ===== ABOUT US ===== */
+.about-us-main-44-d345{
+    width: 100%;
+    background-color: #fdf6f0;
+    max-width: 1300px;
+    margin: 0px auto;
+    overflow-x: hidden;
+}
+.about-us-inner-44-d345{ width: 100%; }
+.about-us-image-flex-44-d345{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 60px;
+    gap: 40px;
+}
+.about-us-erh-d345{ width: 40%; display: flex; justify-content: center; align-items: center; }
+.about-us-erh-d345 img{ width: 320px; height: 320px; object-fit: cover; border-radius: 50%; }
+.about-us-text-4jei-d345{ width: 55%; text-align: center; }
+.about-us-text-4jei-d345 .baner-heading-d345 h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c1810;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px 0px 12px 0px;
+}
+.about-us-text-4jei-d345 .baner-heading-d345::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e08a1e;
+    margin: 0px auto 24px auto;
+    border-radius: 2px;
+}
+.about-us-disc-d345 p{
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.8;
+    max-width: 420px;
+    margin: 0px auto 28px auto;
+}
+.about-us-social-d345{ display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 10px; }
+.about-us-social-d345 a{ color: #2c1810; font-size: 22px; text-decoration: none; transition: color 0.2s; }
+.about-us-social-d345 a:hover{ color: #e08a1e; }
+.about-us-social-d345 svg{ width: 26px; height: 26px; fill: #2c1810; transition: fill 0.2s; }
+.about-us-social-d345 a:hover svg{ fill: #e08a1e; }
+@media (max-width: 1024px){
+    .about-us-image-flex-44-d345{ padding: 50px 0px; }
+    .about-us-erh-d345 img{ width: 270px; height: 270px; }
+    .about-us-text-4jei-d345 .baner-heading-d345 h2{ font-size: 26px; }
+    .about-us-disc-d345 p{ font-size: 14px; }
+}
+@media (max-width: 768px){
+    .about-us-image-flex-44-d345{ flex-direction: column; padding: 50px 0px; text-align: center; }
+    .about-us-erh-d345{ width: 100%; }
+    .about-us-erh-d345 img{ width: 250px; height: 250px; }
+    .about-us-text-4jei-d345{ width: 100%; }
+    .about-us-disc-d345 p{ max-width: 100%; }
+}
 @media (max-width: 480px){
-    .baner-cofee-baner-image-flex-44-d345{
-        padding: 40px 0px;
-    }
-    .baner-heading-d345 h2{
-        font-size: 22px;
-    }
-    .baner-span-d345 span{
-        font-size: 21px;
-    }
-    .baner-para-disc-d345 p{
-        font-size: 17px;
-    }
-    .baner-image-erh-d345 img{
-        max-width: 280px;
-    }
-    .button-d345 a,
-    .button-irih-d345 a{
-        font-size: 13px;
-        padding: 10px 20px;
-    }
-    .baner-button-j43j-d345{
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-    }
+    .about-us-image-flex-44-d345{ padding: 40px 0px; }
+    .about-us-erh-d345 img{ width: 200px; height: 200px; }
+    .about-us-text-4jei-d345 .baner-heading-d345 h2{ font-size: 22px; }
+    .about-us-disc-d345 p{ font-size: 13px; }
+    .about-us-social-d345 svg{ width: 22px; height: 22px; }
+}
+
+/* ===== MENU ===== */
+.menu-main-55-d345{
+    width: 100%;
+    overflow-x: hidden;
+    max-width: 1300px;
+    margin: 0px auto;
+    background-color: #1a1a1a;
+}
+.menu-inner-55-d345{ width: 100%; padding: 60px 10px; }
+.menu-heading-top-55-d345{ text-align: center; margin-bottom: 50px; }
+.menu-heading-top-55-d345 h2{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px 0px 12px 0px;
+}
+.menu-heading-top-55-d345::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e08a1e;
+    margin: 0px auto;
+    border-radius: 2px;
+}
+.menu-row-55-d345{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.menu-row-55-d345:last-child{ margin-bottom: 0px; }
+.menu-single-card-55-d345{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.menu-single-card-55-d345:hover{ transform: translateY(-8px); }
+.menu-card-image-55-d345{ width: 100%; display: flex; justify-content: center; align-items: center; margin-bottom: 24px; }
+.menu-card-image-55-d345 img{ width: 100%; max-width: 320px; height: 280px; object-fit: contain; }
+.menu-card-title-55-d345 h3{ font-family: sans-serif; font-size: 22px; font-weight: 700; color: #ffffff; margin: 0px 0px 12px 0px; transition: color 0.2s; }
+.menu-single-card-55-d345:hover .menu-card-title-55-d345 h3{ color: #e08a1e; }
+.menu-card-disc-55-d345 p{ font-family: sans-serif; font-size: 14px; color: #aaaaaa; line-height: 1.8; margin: 0px; max-width: 280px; }
+@media (max-width: 1024px){
+    .menu-inner-55-d345{ padding: 50px 0px; }
+    .menu-card-image-55-d345 img{ height: 230px; }
+    .menu-card-title-55-d345 h3{ font-size: 20px; }
+    .menu-heading-top-55-d345 h2{ font-size: 28px; }
+    .menu-row-55-d345{ margin-bottom: 40px; }
+}
+@media (max-width: 768px){
+    .menu-inner-55-d345{ padding: 50px 0px; }
+    .menu-row-55-d345{ justify-content: center; margin-bottom: 20px; gap: 40px; }
+    .menu-single-card-55-d345{ width: 80%; }
+    .menu-card-image-55-d345 img{ height: 250px; }
+    .menu-heading-top-55-d345 h2{ font-size: 26px; }
+}
+@media (max-width: 480px){
+    .menu-inner-55-d345{ padding: 40px 0px; }
+    .menu-single-card-55-d345{ width: 100%; }
+    .menu-card-image-55-d345 img{ height: 200px; }
+    .menu-heading-top-55-d345 h2{ font-size: 22px; }
+    .menu-card-title-55-d345 h3{ font-size: 18px; }
+    .menu-card-disc-55-d345 p{ font-size: 13px; }
+}
+
+/* ===== TESTIMONIALS ===== */
+.testi-main-66-d345{ width: 100%; }
+.testi-inner-66-d345{
+    width: 100%;
+    background-color: #fdf6f0;
+    overflow-x: hidden;
+    max-width: 1300px;
+    margin: 20px auto;
+}
+.testi-heading-top-66-d345{ text-align: center; margin-bottom: 60px; }
+.testi-heading-top-66-d345 h2{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c1810;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px 0px 12px 0px;
+}
+.testi-heading-top-66-d345::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e08a1e;
+    margin: 0px auto;
+    border-radius: 2px;
+}
+.testi-slider-wrapper-66-d345{ position: relative; width: 100%; display: flex; align-items: center; gap: 10px; }
+.testi-slider-track-66-d345{ width: 100%; overflow: hidden; }
+.testi-slides-flex-66-d345{ display: flex; transition: transform 0.4s ease; }
+.testi-single-slide-66-d345{ min-width: 33.333%; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0px 30px; box-sizing: border-box; }
+.testi-img-wrap-66-d345{ width: 160px; height: 160px; border-radius: 50%; overflow: hidden; margin-bottom: 20px; }
+.testi-img-wrap-66-d345 img{ width: 100%; height: 100%; object-fit: cover; }
+.testi-name-66-d345{ font-family: sans-serif; font-size: 17px; font-weight: 700; color: #2c1810; margin: 0px 0px 10px 0px; }
+.testi-review-66-d345{ font-family: sans-serif; font-size: 14px; color: #666666; line-height: 1.8; font-style: italic; margin: 0px; max-width: 260px; }
+.testi-arrow-66-d345{ background: transparent; border: none; cursor: pointer; padding: 0px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
+.testi-arrow-66-d345:hover{ opacity: 0.7; }
+.testi-arrow-66-d345 svg{ width: 40px; height: 40px; stroke: #e08a1e; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.testi-dots-66-d345{ display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 40px; }
+.testi-dot-66-d345{ width: 12px; height: 12px; border-radius: 50%; background-color: #d4b8a0; cursor: pointer; transition: background 0.3s; border: none; padding: 0px; }
+.testi-dot-66-d345.active-dot-66-d345{ background-color: #e08a1e; }
+@media (max-width: 1024px){
+    .testi-inner-66-d345{ padding: 50px 0px; }
+    .testi-img-wrap-66-d345{ width: 130px; height: 130px; }
+    .testi-name-66-d345{ font-size: 15px; }
+    .testi-review-66-d345{ font-size: 13px; }
+    .testi-arrow-66-d345 svg{ width: 34px; height: 34px; }
+}
+@media (max-width: 768px){
+    .testi-inner-66-d345{ padding: 50px 0px; }
+    .testi-arrow-66-d345 svg{ width: 30px; height: 30px; }
+}
+@media (max-width: 480px){
+    .testi-inner-66-d345{ padding: 40px 0px; }
+    .testi-heading-top-66-d345 h2{ font-size: 24px; }
+    .testi-arrow-66-d345 svg{ width: 26px; height: 26px; }
+    .testi-img-wrap-66-d345{ width: 110px; height: 110px; }
+}
+
+/* ===== GALLERY ===== */
+.gallery-main-77-d345{ width: 100%; background-color: #ffffff; max-width: 1300px; margin: 0px auto; overflow-x: hidden; }
+.gallery-inner-77-d345{ width: 100%; }
+.gallery-heading-top-77-d345{ text-align: center; margin-bottom: 50px; }
+.gallery-heading-top-77-d345 h2{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c1810;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px 0px 12px 0px;
+}
+.gallery-heading-top-77-d345::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e08a1e;
+    margin: 0px auto;
+    border-radius: 2px;
+}
+.gallery-grid-77-d345{ width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.gallery-single-img-77-d345{ width: 100%; overflow: hidden; border-radius: 10px; }
+.gallery-single-img-77-d345 img{ width: 100%; height: 260px; object-fit: cover; display: block; border-radius: 10px; transition: transform 0.4s ease; }
+.gallery-single-img-77-d345:hover img{ transform: scale(1.08); }
+@media (max-width: 1024px){
+    .gallery-inner-77-d345{ padding: 50px 0px; }
+    .gallery-grid-77-d345{ grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .gallery-single-img-77-d345 img{ height: 220px; }
+    .gallery-heading-top-77-d345 h2{ font-size: 28px; }
+}
+@media (max-width: 768px){
+    .gallery-inner-77-d345{ padding: 50px 0px; }
+    .gallery-grid-77-d345{ grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .gallery-single-img-77-d345 img{ height: 200px; }
+    .gallery-heading-top-77-d345 h2{ font-size: 26px; }
+}
+@media (max-width: 480px){
+    .gallery-inner-77-d345{ padding: 40px 0px; }
+    .gallery-grid-77-d345{ grid-template-columns: repeat(1, 1fr); gap: 14px; }
+    .gallery-single-img-77-d345 img{ height: 220px; }
+    .gallery-heading-top-77-d345 h2{ font-size: 22px; }
+}
+
+/* ===== CONTACT ===== */
+.contact-main-88-d345{ width: 100%; background-color: #fdf6f0; max-width: 1300px; margin: 0px auto; min-height: 455px; overflow-x: hidden; }
+.contact-inner-88-d345{ width: 100%; padding: 20px 15px; }
+.contact-heading-top-88-d345{ text-align: center; margin-top: 50px; margin-bottom: 50px; }
+.contact-heading-top-88-d345 h2{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c1810;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px 0px 12px 0px;
+}
+.contact-heading-top-88-d345::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e08a1e;
+    margin: 0px auto;
+    border-radius: 2px;
+}
+.contact-flex-88-d345{ width: 100%; display: flex; align-items: flex-start; justify-content: space-between; gap: 60px; margin-bottom: 60px; }
+.contact-info-88-d345{ width: 45%; display: flex; flex-direction: column; gap: 22px; }
+.contact-info-row-88-d345{ display: flex; align-items: center; gap: 14px; }
+.contact-info-row-88-d345 svg{ width: 22px; height: 22px; stroke: #2c1810; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.contact-info-row-88-d345 span{ font-family: sans-serif; font-size: 15px; color: #2c1810; line-height: 1.6; }
+.contact-form-88-d345{ width: 55%; display: flex; flex-direction: column; gap: 16px; }
+.contact-form-88-d345 input,
+.contact-form-88-d345 textarea{
+    width: 95%;
+    border: 1px solid #e0d6cf;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #2c1810;
+    background-color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    transition: border 0.2s;
+    margin: 0px;
+    display: block;
+}
+.contact-form-88-d345 input{ line-height: 48px; text-indent: 14px; }
+.contact-form-88-d345 textarea{ min-height: 130px; resize: none; text-indent: 14px; line-height: 2; }
+.contact-form-88-d345 input::placeholder,
+.contact-form-88-d345 textarea::placeholder{ color: #aaaaaa; }
+.contact-form-88-d345 input:focus,
+.contact-form-88-d345 textarea:focus{ border: 1px solid #e08a1e; }
+.contact-submit-btn-88-d345{ display: flex; align-items: center; justify-content: flex-start; margin-top: 4px; }
+.contact-submit-btn-88-d345 button{
+    background-color: #2c1810;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+    line-height: 46px;
+    width: 130px;
+    text-align: center;
+    display: block;
+}
+.contact-submit-btn-88-d345 button:hover{ background-color: #e08a1e; }
+@media (max-width: 1024px){
+    .contact-flex-88-d345{ gap: 40px; margin-bottom: 50px; }
+    .contact-heading-top-88-d345{ margin-top: 40px; margin-bottom: 40px; }
+    .contact-heading-top-88-d345 h2{ font-size: 28px; }
+}
+@media (max-width: 768px){
+    .contact-flex-88-d345{ flex-direction: column; gap: 36px; margin-bottom: 40px; }
+    .contact-info-88-d345{ width: 100%; }
+    .contact-form-88-d345{ width: 100%; }
+    .contact-heading-top-88-d345 h2{ font-size: 26px; }
+}
+@media (max-width: 480px){
+    .contact-inner-88-d345{ margin: 0px 20px; }
+    .contact-heading-top-88-d345{ margin-top: 30px; margin-bottom: 30px; }
+    .contact-heading-top-88-d345 h2{ font-size: 22px; }
+    .contact-info-row-88-d345 span{ font-size: 13px; }
+    .contact-form-88-d345 input{ font-size: 13px; }
+    .contact-form-88-d345 textarea{ font-size: 13px; }
+    .contact-submit-btn-88-d345 button{ font-size: 14px; }
 }
 </style>
+</head>
+<body>
 
+<!-- ===== NAVBAR (SIRF EK BAAR) ===== -->
+<div class="custom-main-ue4r-d345">
+    <div class="custom-inner-ue4r-d345">
+        <div class="custom-header-ue4r-d345">
+            <div class="logo-cofee-d345">
+                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
+                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
+                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
+                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
+                </svg>
+            </div>
+            <div class="logo-cof-text-d345">
+                <span>Coffee</span>
+            </div>
+            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links-ue4r-d345">
+                <ul class="links-menu">
+                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
+                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
+                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
+                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== BANNER ===== -->
 <div class="baner-cofee-main-44-d345">
     <div class="baner-cofee-inner-44-d345">
         <div class="baner-cofee-baner-image-flex-44-d345">
@@ -444,393 +616,9 @@
             </div>
         </div>
     </div>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.custom-main-ue4r-d345{
-    width: 100%;
-}
-.custom-inner-ue4r-d345{
-    width: 100%;
-    max-width: 1300px;
-    margin: 0px auto;
-}
-.custom-header-ue4r-d345{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: #2c1810;
-    min-height: 70px;
-    gap: 16px;
-}
-.logo-cofee-d345{
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-}
-.logo-cofee-d345 svg{
-    width: 36px;
-    height: 36px;
-}
-.logo-cof-text-d345 span{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: sans-serif;
-    margin-right: auto;
-}
-.nav-links{
-    margin-left: auto;
-}
-.links-menu{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 4px;
-    align-items: center;
-}
-.links-menu li{
-    list-style: none;
-}
-.links-menu a{
-    color: #ccc;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 15px;
-    padding: 7px 18px;
-    border-radius: 20px;
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-    cursor: pointer;
-}
-.links-menu a.active,
-.links-menu a:hover{
-    background: #e08a1e;
-    color: #fff;
-}
-
-/* Hamburger Button */
-.hamburger-btn-ue4r-d345{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    width: 36px;
-    height: 36px;
-}
-.hamburger-btn-ue4r-d345 span{
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .custom-header-ue4r-d345{
-        padding: 14px 0px;
-        gap: 12px;
-    }
-    .links-menu{
-        gap: 2px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 7px 14px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .custom-header-ue4r-d345{
-        position: relative;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 10px;
-        min-height: 60px;
-    }
-    .hamburger-btn-ue4r-d345{
-        display: flex;
-    }
-    .nav-links{
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0px;
-        width: 100%;
-        background: #2c1810;
-        margin-left: 0px;
-        z-index: 999;
-    }
-    .nav-links.open-menu-ue4r-d345{
-        display: block;
-    }
-    .links-menu{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-    }
-    .links-menu li{
-        width: 100%;
-        border-bottom: 1px solid #ffffff10;
-    }
-    .links-menu a{
-        display: block;
-        width: 100%;
-        border-radius: 0px;
-        padding: 14px 20px;
-        font-size: 15px;
-        box-sizing: border-box;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .custom-header-ue4r-d345{
-        min-height: 55px;
-        gap: 8px;
-    }
-    .logo-cofee-d345{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cofee-d345 svg{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 16px;
-    }
-    .nav-links{
-        top: 55px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 13px 16px;
-    }
-}
-</style>
-
-<div class="custom-main-ue4r-d345">
-    <div class="custom-inner-ue4r-d345">
-        <div class="custom-header-ue4r-d345">
-            <div class="logo-cofee-d345">
-                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
-                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
-                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
-                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
-                </svg>
-            </div>
-            <div class="logo-cof-text-d345">
-                <span>Coffee</span>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="nav-links-ue4r-d345">
-                <div class="links-menu">
-                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
-                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
-                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
-                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
-                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
-                </div>
-            </div>
-
-        </div>
-    </div>
 </div>
 
-<script>
-    var hamburger = document.getElementById('hamburger-ue4r-d345');
-    var navLinks = document.getElementById('nav-links-ue4r-d345');
-
-    hamburger.addEventListener('click', function(){
-        navLinks.classList.toggle('open-menu-ue4r-d345');
-    });
-
-    var allLinks = document.querySelectorAll('.nav-link');
-    allLinks.forEach(function(link){
-        link.addEventListener('click', function(){
-            navLinks.classList.remove('open-menu-ue4r-d345');
-        });
-    });
-</script>
-<style>
-.about-us-main-44-d345{
-    width: 100%;
-    background-color: #fdf6f0;
-     max-width: 1300px;
-    margin: 0px auto;
-    overflow-x: hidden;
-}
-.about-us-inner-44-d345{
-    width: 100%;
-}
-.about-us-image-flex-44-d345{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 60px;
-    gap: 40px;
-}
-.about-us-erh-d345{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.about-us-erh-d345 img{
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.about-us-text-4jei-d345{
-    width: 55%;
-    text-align: center;
-}
-.about-us-text-4jei-d345 .baner-heading-d345 h2{
-    font-family: sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #2c1810;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0px 0px 12px 0px;
-}
-.about-us-text-4jei-d345 .baner-heading-d345::after{
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #e08a1e;
-    margin: 0px auto 24px auto;
-    border-radius: 2px;
-}
-.about-us-disc-d345 p{
-    font-family: sans-serif;
-    font-size: 15px;
-    color: #555555;
-    line-height: 1.8;
-    max-width: 420px;
-    margin: 0px auto 28px auto;
-}
-.about-us-social-d345{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    margin-top: 10px;
-}
-.about-us-social-d345 a{
-    color: #2c1810;
-    font-size: 22px;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-.about-us-social-d345 a:hover{
-    color: #e08a1e;
-}
-.about-us-social-d345 svg{
-    width: 26px;
-    height: 26px;
-    fill: #2c1810;
-    transition: fill 0.2s;
-}
-.about-us-social-d345 a:hover svg{
-    fill: #e08a1e;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .about-us-image-flex-44-d345{
-        padding: 50px 0px;
-    }
-    .about-us-erh-d345 img{
-        width: 270px;
-        height: 270px;
-    }
-    .about-us-text-4jei-d345 .baner-heading-d345 h2{
-        font-size: 26px;
-    }
-    .about-us-disc-d345 p{
-        font-size: 14px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .about-us-image-flex-44-d345{
-        flex-direction: column;
-        padding: 50px 0px;
-        text-align: center;
-    }
-    .about-us-erh-d345{
-        width: 100%;
-    }
-    .about-us-erh-d345 img{
-        width: 250px;
-        height: 250px;
-    }
-    .about-us-text-4jei-d345{
-        width: 100%;
-    }
-    .about-us-disc-d345 p{
-        max-width: 100%;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .about-us-image-flex-44-d345{
-        padding: 40px 0px;
-    }
-    .about-us-erh-d345 img{
-        width: 200px;
-        height: 200px;
-    }
-    .about-us-text-4jei-d345 .baner-heading-d345 h2{
-        font-size: 22px;
-    }
-    .about-us-disc-d345 p{
-        font-size: 13px;
-    }
-    .about-us-social-d345 svg{
-        width: 22px;
-        height: 22px;
-    }
-}
-</style>
-
+<!-- ===== ABOUT US ===== -->
 <div class="about-us-main-44-d345">
     <div class="about-us-inner-44-d345">
         <div class="about-us-image-flex-44-d345">
@@ -868,1027 +656,218 @@
     </div>
 </div>
 
-</div>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.custom-main-ue4r-d345{
-    width: 100%;
-}
-.custom-inner-ue4r-d345{
-    width: 100%;
-    max-width: 1300px;
-    margin: 0px auto;
-}
-.custom-header-ue4r-d345{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: #2c1810;
-    min-height: 70px;
-    gap: 16px;
-}
-.logo-cofee-d345{
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-}
-.logo-cofee-d345 svg{
-    width: 36px;
-    height: 36px;
-}
-.logo-cof-text-d345 span{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: sans-serif;
-    margin-right: auto;
-}
-.nav-links{
-    margin-left: auto;
-}
-.links-menu{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 4px;
-    align-items: center;
-}
-.links-menu li{
-    list-style: none;
-}
-.links-menu a{
-    color: #ccc;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 15px;
-    padding: 7px 18px;
-    border-radius: 20px;
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-    cursor: pointer;
-}
-.links-menu a.active,
-.links-menu a:hover{
-    background: #e08a1e;
-    color: #fff;
-}
-
-/* Hamburger Button */
-.hamburger-btn-ue4r-d345{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    width: 36px;
-    height: 36px;
-}
-.hamburger-btn-ue4r-d345 span{
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .custom-header-ue4r-d345{
-        padding: 14px 0px;
-        gap: 12px;
-    }
-    .links-menu{
-        gap: 2px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 7px 14px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .custom-header-ue4r-d345{
-        position: relative;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 10px;
-        min-height: 60px;
-    }
-    .hamburger-btn-ue4r-d345{
-        display: flex;
-    }
-    .nav-links{
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0px;
-        width: 100%;
-        background: #2c1810;
-        margin-left: 0px;
-        z-index: 999;
-    }
-    .nav-links.open-menu-ue4r-d345{
-        display: block;
-    }
-    .links-menu{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-    }
-    .links-menu li{
-        width: 100%;
-        border-bottom: 1px solid #ffffff10;
-    }
-    .links-menu a{
-        display: block;
-        width: 100%;
-        border-radius: 0px;
-        padding: 14px 20px;
-        font-size: 15px;
-        box-sizing: border-box;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .custom-header-ue4r-d345{
-        min-height: 55px;
-        gap: 8px;
-    }
-    .logo-cofee-d345{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cofee-d345 svg{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 16px;
-    }
-    .nav-links{
-        top: 55px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 13px 16px;
-    }
-}
-</style>
-
-<div class="custom-main-ue4r-d345">
-    <div class="custom-inner-ue4r-d345">
-        <div class="custom-header-ue4r-d345">
-            <div class="logo-cofee-d345">
-                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
-                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
-                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
-                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
-                </svg>
-            </div>
-            <div class="logo-cof-text-d345">
-                <span>Coffee</span>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="nav-links-ue4r-d345">
-                <div class="links-menu">
-                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
-                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
-                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
-                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
-                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<script>
-    var hamburger = document.getElementById('hamburger-ue4r-d345');
-    var navLinks = document.getElementById('nav-links-ue4r-d345');
-
-    hamburger.addEventListener('click', function(){
-        navLinks.classList.toggle('open-menu-ue4r-d345');
-    });
-
-    var allLinks = document.querySelectorAll('.nav-link');
-    allLinks.forEach(function(link){
-        link.addEventListener('click', function(){
-            navLinks.classList.remove('open-menu-ue4r-d345');
-        });
-    });
-</script>
-<style>
-.menu-main-55-d345{
-    width: 100%;
-    overflow-x: hidden;
-    max-width: 1300px;
-    margin: 0px auto;
-    background-color: #1a1a1a;
-}
-.menu-inner-55-d345{
-    width: 100%;
-    padding: 60px 10px;
-}
-.menu-heading-top-55-d345{
-    text-align: center;
-    margin-bottom: 50px;
-}
-.menu-heading-top-55-d345 h2{
-    font-family: sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0px 0px 12px 0px;
-}
-.menu-heading-top-55-d345::after{
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #e08a1e;
-    margin: 0px auto;
-    border-radius: 2px;
-}
-.menu-row-55-d345{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-content: center;
-    gap: 30px;
-    margin-bottom: 60px;
-}
-.menu-row-55-d345:last-child{
-    margin-bottom: 0px;
-}
-.menu-single-card-55-d345{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-.menu-single-card-55-d345:hover{
-    transform: translateY(-8px);
-}
-.menu-card-image-55-d345{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 24px;
-}
-.menu-card-image-55-d345 img{
-    width: 100%;
-    max-width: 320px;
-    height: 280px;
-    object-fit: contain;
-}
-.menu-card-title-55-d345 h3{
-    font-family: sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0px 0px 12px 0px;
-    transition: color 0.2s;
-}
-.menu-single-card-55-d345:hover .menu-card-title-55-d345 h3{
-    color: #e08a1e;
-}
-.menu-card-disc-55-d345 p{
-    font-family: sans-serif;
-    font-size: 14px;
-    color: #aaaaaa;
-    line-height: 1.8;
-    margin: 0px;
-    max-width: 280px;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .menu-inner-55-d345{
-        padding: 50px 0px;
-    }
-    .menu-card-image-55-d345 img{
-        height: 230px;
-    }
-    .menu-card-title-55-d345 h3{
-        font-size: 20px;
-    }
-    .menu-heading-top-55-d345 h2{
-        font-size: 28px;
-    }
-    .menu-row-55-d345{
-        margin-bottom: 40px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .menu-inner-55-d345{
-        padding: 50px 0px;
-    }
-    .menu-card-image-55-d345 {
-  margin-left: 28%;
-
-    .menu-row-55-d345{
-       justify-content: center;
-        margin-bottom: 20px;
-        gap: 40px;
-    }
-    .menu-single-card-55-d345{
-        width: 80%;
-
-    }
-    .menu-card-image-55-d345 img{
-        height: 250px;
-    }
-    .menu-heading-top-55-d345 h2{
-        font-size: 26px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .menu-inner-55-d345{
-        padding: 40px 0px;
-    }
-    .menu-single-card-55-d345{
-        width: 100%;
-    }
-    .menu-card-image-55-d345 img{
-        height: 200px;
-    }
-    .menu-heading-top-55-d345 h2{
-        font-size: 22px;
-    }
-    .menu-card-title-55-d345 h3{
-        font-size: 18px;
-    }
-    .menu-card-disc-55-d345 p{
-        font-size: 13px;
-    }
-}
-</style>
-
+<!-- ===== MENU ===== -->
 <div class="menu-main-55-d345">
     <div class="menu-inner-55-d345">
-
         <div class="menu-heading-top-55-d345">
             <h2>Our Menu</h2>
         </div>
-
-        <!-- Row 1 — Coffee -->
         <div class="menu-row-55-d345">
             <div class="menu-single-card-55-d345">
                 <div class="menu-card-image-55-d345">
                     <img src="hot-beverages.png" alt="Hot Beverages">
                 </div>
-                <div class="menu-card-title-55-d345">
-                    <h3>Hot Beverages</h3>
-                </div>
-                <div class="menu-card-disc-55-d345">
-                    <p>Wide range of Steaming hot coffee to make you fresh and light.</p>
-                </div>
+                <div class="menu-card-title-55-d345"><h3>Hot Beverages</h3></div>
+                <div class="menu-card-disc-55-d345"><p>Wide range of Steaming hot coffee to make you fresh and light.</p></div>
             </div>
             <div class="menu-single-card-55-d345">
                 <div class="menu-card-image-55-d345">
                     <img src="cold-beverages.png" alt="Cold Beverages">
                 </div>
-                <div class="menu-card-title-55-d345">
-                    <h3>Cold Beverages</h3>
-                </div>
-                <div class="menu-card-disc-55-d345">
-                    <p>Creamy and frothy cold coffee to make you cool.</p>
-                </div>
+                <div class="menu-card-title-55-d345"><h3>Cold Beverages</h3></div>
+                <div class="menu-card-disc-55-d345"><p>Creamy and frothy cold coffee to make you cool.</p></div>
             </div>
             <div class="menu-single-card-55-d345">
                 <div class="menu-card-image-55-d345">
                     <img src="refreshment.png" alt="Refreshment">
                 </div>
-                <div class="menu-card-title-55-d345">
-                    <h3>Refreshment</h3>
-                </div>
-                <div class="menu-card-disc-55-d345">
-                    <p>Fruit and icy refreshing drink to make feel refresh.</p>
-                </div>
+                <div class="menu-card-title-55-d345"><h3>Refreshment</h3></div>
+                <div class="menu-card-disc-55-d345"><p>Fruit and icy refreshing drink to make feel refresh.</p></div>
             </div>
             <div class="menu-single-card-55-d345">
                 <div class="menu-card-image-55-d345">
                     <img src="special-combo.png" alt="Special Combos">
                 </div>
-                <div class="menu-card-title-55-d345">
-                    <h3>Special Combos</h3>
-                </div>
-                <div class="menu-card-disc-55-d345">
-                    <p>Your favorite eating and drinking combations.</p>
-                </div>
+                <div class="menu-card-title-55-d345"><h3>Special Combos</h3></div>
+                <div class="menu-card-disc-55-d345"><p>Your favorite eating and drinking combations.</p></div>
             </div>
             <div class="menu-single-card-55-d345">
                 <div class="menu-card-image-55-d345">
                     <img src="desserts.png" alt="Dessert">
                 </div>
-                <div class="menu-card-title-55-d345">
-                    <h3>Dessert</h3>
-                </div>
-                <div class="menu-card-disc-55-d345">
-                    <p>Satiate your palate and take you on a culinary treat.</p>
-                </div>
+                <div class="menu-card-title-55-d345"><h3>Dessert</h3></div>
+                <div class="menu-card-disc-55-d345"><p>Satiate your palate and take you on a culinary treat.</p></div>
             </div>
             <div class="menu-single-card-55-d345">
                 <div class="menu-card-image-55-d345">
                     <img src="burger-frenchfries.png" alt="Burger & French Fries">
                 </div>
-                <div class="menu-card-title-55-d345">
-                    <h3>Burger & French Fries</h3>
-                </div>
-                <div class="menu-card-disc-55-d345">
-                    <p>Quick bites to satisfy your small size hunger.</p>
-                </div>
+                <div class="menu-card-title-55-d345"><h3>Burger & French Fries</h3></div>
+                <div class="menu-card-disc-55-d345"><p>Quick bites to satisfy your small size hunger.</p></div>
             </div>
-</div>
+        </div>
     </div>
 </div>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.custom-main-ue4r-d345{
-    width: 100%;
-}
-.custom-inner-ue4r-d345{
-    width: 100%;
-    max-width: 1300px;
-    margin: 0px auto;
-}
-.custom-header-ue4r-d345{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: #2c1810;
-    min-height: 70px;
-    gap: 16px;
-}
-.logo-cofee-d345{
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-}
-.logo-cofee-d345 svg{
-    width: 36px;
-    height: 36px;
-}
-.logo-cof-text-d345 span{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: sans-serif;
-    margin-right: auto;
-}
-.nav-links{
-    margin-left: auto;
-}
-.links-menu{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 4px;
-    align-items: center;
-}
-.links-menu li{
-    list-style: none;
-}
-.links-menu a{
-    color: #ccc;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 15px;
-    padding: 7px 18px;
-    border-radius: 20px;
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-    cursor: pointer;
-}
-.links-menu a.active,
-.links-menu a:hover{
-    background: #e08a1e;
-    color: #fff;
-}
 
-/* Hamburger Button */
-.hamburger-btn-ue4r-d345{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    width: 36px;
-    height: 36px;
-}
-.hamburger-btn-ue4r-d345 span{
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .custom-header-ue4r-d345{
-        padding: 14px 0px;
-        gap: 12px;
-    }
-    .links-menu{
-        gap: 2px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 7px 14px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .custom-header-ue4r-d345{
-        position: relative;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 10px;
-        min-height: 60px;
-    }
-    .hamburger-btn-ue4r-d345{
-        display: flex;
-    }
-    .nav-links{
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0px;
-        width: 100%;
-        background: #2c1810;
-        margin-left: 0px;
-        z-index: 999;
-    }
-    .nav-links.open-menu-ue4r-d345{
-        display: block;
-    }
-    .links-menu{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-    }
-    .links-menu li{
-        width: 100%;
-        border-bottom: 1px solid #ffffff10;
-    }
-    .links-menu a{
-        display: block;
-        width: 100%;
-        border-radius: 0px;
-        padding: 14px 20px;
-        font-size: 15px;
-        box-sizing: border-box;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .custom-header-ue4r-d345{
-        min-height: 55px;
-        gap: 8px;
-    }
-    .logo-cofee-d345{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cofee-d345 svg{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 16px;
-    }
-    .nav-links{
-        top: 55px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 13px 16px;
-    }
-}
-</style>
-
-<div class="custom-main-ue4r-d345">
-    <div class="custom-inner-ue4r-d345">
-        <div class="custom-header-ue4r-d345">
-            <div class="logo-cofee-d345">
-                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
-                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
-                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
-                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
+<!-- ===== TESTIMONIALS ===== -->
+<div class="testi-main-66-d345">
+    <div class="testi-inner-66-d345">
+        <div class="testi-heading-top-66-d345">
+            <h2>Testimonials</h2>
+        </div>
+        <div class="testi-slider-wrapper-66-d345">
+            <button class="testi-arrow-66-d345" id="testi-prev-66">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
-            </div>
-            <div class="logo-cof-text-d345">
-                <span>Coffee</span>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
-                <span></span>
-                <span></span>
-                <span></span>
             </button>
-
-            <div class="nav-links" id="nav-links-ue4r-d345">
-                <div class="links-menu">
-                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
-                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
-                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
-                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
-                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
+            <div class="testi-slider-track-66-d345">
+                <div class="testi-slides-flex-66-d345" id="testi-slides-66">
+                    <div class="testi-single-slide-66-d345">
+                        <div class="testi-img-wrap-66-d345"><img src="user-1.jpg" alt="Sarah Johnson"></div>
+                        <p class="testi-name-66-d345">Sarah Johnson</p>
+                        <p class="testi-review-66-d345">"Loved the French roast. Perfectly balanced and rich. Will order again!"</p>
+                    </div>
+                    <div class="testi-single-slide-66-d345">
+                        <div class="testi-img-wrap-66-d345"><img src="user-2.jpg" alt="James Wilson"></div>
+                        <p class="testi-name-66-d345">James Wilson</p>
+                        <p class="testi-review-66-d345">"Great espresso blend! Smooth and bold flavor. Fast shipping too!"</p>
+                    </div>
+                    <div class="testi-single-slide-66-d345">
+                        <div class="testi-img-wrap-66-d345"><img src="user-3.jpg" alt="Michael Brown"></div>
+                        <p class="testi-name-66-d345">Michael Brown</p>
+                        <p class="testi-review-66-d345">"Fantastic mocha flavor. Fresh and aromatic. Quick shipping!"</p>
+                    </div>
+                    <div class="testi-single-slide-66-d345">
+                        <div class="testi-img-wrap-66-d345"><img src="user-4.jpg" alt="Emily Davis"></div>
+                        <p class="testi-name-66-d345">Emily Davis</p>
+                        <p class="testi-review-66-d345">"Amazing coffee! Best I have ever tasted. Highly recommended!"</p>
+                    </div>
+                    <div class="testi-single-slide-66-d345">
+                        <div class="testi-img-wrap-66-d345"><img src="user-5.jpg" alt="Robert Smith"></div>
+                        <p class="testi-name-66-d345">Robert Smith</p>
+                        <p class="testi-review-66-d345">"Perfect blend every morning. Makes my day great every time!"</p>
+                    </div>
+                    <div class="testi-single-slide-66-d345">
+                        <div class="testi-img-wrap-66-d345"><img src="user-1.jpg" alt="Lisa Adams"></div>
+                        <p class="testi-name-66-d345">Lisa Adams</p>
+                        <p class="testi-review-66-d345">"Rich aroma and smooth taste. My favorite coffee brand ever!"</p>
+                    </div>
                 </div>
             </div>
+            <button class="testi-arrow-66-d345" id="testi-next-66">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="testi-dots-66-d345" id="testi-dots-66"></div>
+    </div>
+</div>
 
+<!-- ===== GALLERY ===== -->
+<div class="gallery-main-77-d345">
+    <div class="gallery-inner-77-d345">
+        <div class="gallery-heading-top-77-d345">
+            <h2>Gallery</h2>
+        </div>
+        <div class="gallery-grid-77-d345">
+            <div class="gallery-single-img-77-d345"><img src="gallery-1.jpg" alt="Gallery Image 1"></div>
+            <div class="gallery-single-img-77-d345"><img src="gallery-2.jpg" alt="Gallery Image 2"></div>
+            <div class="gallery-single-img-77-d345"><img src="gallery-3.jpg" alt="Gallery Image 3"></div>
+            <div class="gallery-single-img-77-d345"><img src="gallery-4.jpg" alt="Gallery Image 4"></div>
+            <div class="gallery-single-img-77-d345"><img src="gallery-5.jpg" alt="Gallery Image 5"></div>
+            <div class="gallery-single-img-77-d345"><img src="gallery-6.jpg" alt="Gallery Image 6"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<div class="contact-main-88-d345">
+    <div class="contact-inner-88-d345">
+        <div class="contact-heading-top-88-d345">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-flex-88-d345">
+            <div class="contact-info-88-d345">
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#2c1810" stroke="none"/></svg>
+                    <span>123 Campsite Avenue, Wilderness, CA 98765</span>
+                </div>
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+                    <span>info@coffeeshopwebsite.com</span>
+                </div>
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" fill="#2c1810" stroke="none"/></svg>
+                    <span>(123) 456-78909</span>
+                </div>
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
+                </div>
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Saturday: 10:00 AM - 3:00 PM</span>
+                </div>
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Sunday: Closed</span>
+                </div>
+                <div class="contact-info-row-88-d345">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    <span>www.codingnepalweb.com</span>
+                </div>
+            </div>
+            <div class="contact-form-88-d345">
+                <input type="text" placeholder="Your name">
+                <input type="email" placeholder="Your email">
+                <textarea placeholder="Your message"></textarea>
+                <div class="contact-submit-btn-88-d345">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <script>
+    // Navbar hamburger
     var hamburger = document.getElementById('hamburger-ue4r-d345');
     var navLinks = document.getElementById('nav-links-ue4r-d345');
-
     hamburger.addEventListener('click', function(){
         navLinks.classList.toggle('open-menu-ue4r-d345');
     });
-
     var allLinks = document.querySelectorAll('.nav-link');
     allLinks.forEach(function(link){
         link.addEventListener('click', function(){
             navLinks.classList.remove('open-menu-ue4r-d345');
         });
     });
-</script>
-<style>
-.testi-main-66-d345{
-    width: 100%;
-}
-.testi-inner-66-d345{
-    width: 100%;
-    background-color: #fdf6f0;
-    overflow-x: hidden;
-    max-width: 1300px;
-    margin: 20px auto;
-}
-.testi-heading-top-66-d345{
-    text-align: center;
-    margin-bottom: 60px;
-}
-.testi-heading-top-66-d345 h2{
-    font-family: sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #2c1810;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0px 0px 12px 0px;
-}
-.testi-heading-top-66-d345::after{
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #e08a1e;
-    margin: 0px auto;
-    border-radius: 2px;
-}
-.testi-slider-wrapper-66-d345{
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.testi-slider-track-66-d345{
-    width: 100%;
-    overflow: hidden;
-}
-.testi-slides-flex-66-d345{
-    display: flex;
-    transition: transform 0.4s ease;
-}
-.testi-single-slide-66-d345{
-    min-width: 33.333%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0px 30px;
-    box-sizing: border-box;
-}
-.testi-img-wrap-66-d345{
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-.testi-img-wrap-66-d345 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.testi-name-66-d345{
-    font-family: sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: #2c1810;
-    margin: 0px 0px 10px 0px;
-}
-.testi-review-66-d345{
-    font-family: sans-serif;
-    font-size: 14px;
-    color: #666666;
-    line-height: 1.8;
-    font-style: italic;
-    margin: 0px;
-    max-width: 260px;
-}
-.testi-arrow-66-d345{
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.2s;
-}
-.testi-arrow-66-d345:hover{
-    opacity: 0.7;
-}
-.testi-arrow-66-d345 svg{
-    width: 40px;
-    height: 40px;
-    stroke: #e08a1e;
-    fill: none;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-.testi-dots-66-d345{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 40px;
-}
-.testi-dot-66-d345{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #d4b8a0;
-    cursor: pointer;
-    transition: background 0.3s;
-    border: none;
-    padding: 0px;
-}
-.testi-dot-66-d345.active-dot-66-d345{
-    background-color: #e08a1e;
-}
 
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .testi-inner-66-d345{
-        padding: 50px 0px;
-    }
-    .testi-img-wrap-66-d345{
-        width: 130px;
-        height: 130px;
-    }
-    .testi-name-66-d345{
-        font-size: 15px;
-    }
-    .testi-review-66-d345{
-        font-size: 13px;
-    }
-    .testi-arrow-66-d345 svg{
-        width: 34px;
-        height: 34px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .testi-inner-66-d345{
-        padding: 50px 0px;
-    }
-    .testi-arrow-66-d345 svg{
-        width: 30px;
-        height: 30px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .testi-inner-66-d345{
-        padding: 40px 0px;
-    }
-    .testi-heading-top-66-d345 h2{
-        font-size: 24px;
-    }
-    .testi-arrow-66-d345 svg{
-        width: 26px;
-        height: 26px;
-    }
-    .testi-img-wrap-66-d345{
-        width: 110px;
-        height: 110px;
-    }
-}
-</style>
-
-<div class="testi-main-66-d345">
-    <div class="testi-inner-66-d345">
-
-        <div class="testi-heading-top-66-d345">
-            <h2>Testimonials</h2>
-        </div>
-
-        <div class="testi-slider-wrapper-66-d345">
-
-            <!-- Left Arrow SVG -->
-            <button class="testi-arrow-66-d345" id="testi-prev-66">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-
-            <!-- Slider Track -->
-            <div class="testi-slider-track-66-d345">
-                <div class="testi-slides-flex-66-d345" id="testi-slides-66">
-
-                    <!-- Slide 1 -->
-                    <div class="testi-single-slide-66-d345">
-                        <div class="testi-img-wrap-66-d345">
-                            <img src="user-1.jpg" alt="Sarah Johnson">
-                        </div>
-                        <p class="testi-name-66-d345">Sarah Johnson</p>
-                        <p class="testi-review-66-d345">"Loved the French roast. Perfectly balanced and rich. Will order again!"</p>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="testi-single-slide-66-d345">
-                        <div class="testi-img-wrap-66-d345">
-                            <img src="user-2.jpg" alt="James Wilson">
-                        </div>
-                        <p class="testi-name-66-d345">James Wilson</p>
-                        <p class="testi-review-66-d345">"Great espresso blend! Smooth and bold flavor. Fast shipping too!"</p>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="testi-single-slide-66-d345">
-                        <div class="testi-img-wrap-66-d345">
-                            <img src="user-3.jpg" alt="Michael Brown">
-                        </div>
-                        <p class="testi-name-66-d345">Michael Brown</p>
-                        <p class="testi-review-66-d345">"Fantastic mocha flavor. Fresh and aromatic. Quick shipping!"</p>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="testi-single-slide-66-d345">
-                        <div class="testi-img-wrap-66-d345">
-                            <img src="user-4.jpg" alt="Emily Davis">
-                        </div>
-                        <p class="testi-name-66-d345">Emily Davis</p>
-                        <p class="testi-review-66-d345">"Amazing coffee! Best I have ever tasted. Highly recommended!"</p>
-                    </div>
-
-                    <!-- Slide 5 -->
-                    <div class="testi-single-slide-66-d345">
-                        <div class="testi-img-wrap-66-d345">
-                            <img src="user-5.jpg" alt="Robert Smith">
-                        </div>
-                        <p class="testi-name-66-d345">Robert Smith</p>
-                        <p class="testi-review-66-d345">"Perfect blend every morning. Makes my day great every time!"</p>
-                    </div>
-
-                    <!-- Slide 6 -->
-                    <div class="testi-single-slide-66-d345">
-                        <div class="testi-img-wrap-66-d345">
-                            <img src="user-1.jpg" alt="Lisa Adams">
-                        </div>
-                        <p class="testi-name-66-d345">Lisa Adams</p>
-                        <p class="testi-review-66-d345">"Rich aroma and smooth taste. My favorite coffee brand ever!"</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Right Arrow SVG -->
-            <button class="testi-arrow-66-d345" id="testi-next-66">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
-
-        </div>
-
-        <!-- Dots -->
-        <div class="testi-dots-66-d345" id="testi-dots-66"></div>
-
-    </div>
-</div>
-
-<script>
+    // Testimonials slider
     var slidesContainer = document.getElementById('testi-slides-66');
     var dotsContainer = document.getElementById('testi-dots-66');
     var prevBtn = document.getElementById('testi-prev-66');
     var nextBtn = document.getElementById('testi-next-66');
-
     var totalSlides = document.querySelectorAll('.testi-single-slide-66-d345').length;
     var currentIndex = 0;
     var slidesPerView = 3;
 
     function getSlidesPerView(){
         var width = window.innerWidth;
-        if(width <= 480){
-            return 1;
-        } else if(width <= 768){
-            return 2;
-        } else {
-            return 3;
-        }
+        if(width <= 480){ return 1; }
+        else if(width <= 768){ return 2; }
+        else { return 3; }
     }
-
-    function getTotalDots(){
-        return totalSlides - slidesPerView + 1;
-    }
-
+    function getTotalDots(){ return totalSlides - slidesPerView + 1; }
     function createDots(){
         dotsContainer.innerHTML = '';
         var totalDots = getTotalDots();
         for(var i = 0; i < totalDots; i++){
             var dot = document.createElement('button');
             dot.classList.add('testi-dot-66-d345');
-            if(i === 0){
-                dot.classList.add('active-dot-66-d345');
-            }
+            if(i === 0){ dot.classList.add('active-dot-66-d345'); }
             dot.setAttribute('data-index', i);
             dot.addEventListener('click', function(){
                 goToSlide(parseInt(this.getAttribute('data-index')));
@@ -1896,31 +875,22 @@
             dotsContainer.appendChild(dot);
         }
     }
-
     function updateDots(){
         var allDots = document.querySelectorAll('.testi-dot-66-d345');
         allDots.forEach(function(dot, i){
             dot.classList.remove('active-dot-66-d345');
-            if(i === currentIndex){
-                dot.classList.add('active-dot-66-d345');
-            }
+            if(i === currentIndex){ dot.classList.add('active-dot-66-d345'); }
         });
     }
-
     function goToSlide(index){
         var totalDots = getTotalDots();
-        if(index < 0){
-            index = totalDots - 1;
-        }
-        if(index >= totalDots){
-            index = 0;
-        }
+        if(index < 0){ index = totalDots - 1; }
+        if(index >= totalDots){ index = 0; }
         currentIndex = index;
         var slideWidth = 100 / slidesPerView;
         slidesContainer.style.transform = 'translateX(-' + (currentIndex * slideWidth) + '%)';
         updateDots();
     }
-
     function updateSlider(){
         slidesPerView = getSlidesPerView();
         var slideWidth = 100 / slidesPerView;
@@ -1933,906 +903,11 @@
         createDots();
         updateDots();
     }
-
-    prevBtn.addEventListener('click', function(){
-        goToSlide(currentIndex - 1);
-    });
-
-    nextBtn.addEventListener('click', function(){
-        goToSlide(currentIndex + 1);
-    });
-
-    window.addEventListener('resize', function(){
-        updateSlider();
-    });
-
+    prevBtn.addEventListener('click', function(){ goToSlide(currentIndex - 1); });
+    nextBtn.addEventListener('click', function(){ goToSlide(currentIndex + 1); });
+    window.addEventListener('resize', function(){ updateSlider(); });
     updateSlider();
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.custom-main-ue4r-d345{
-    width: 100%;
-}
-.custom-inner-ue4r-d345{
-    width: 100%;
-    max-width: 1300px;
-    margin: 0px auto;
-}
-.custom-header-ue4r-d345{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #3d0c11;
-    min-height: 70px;
-    gap: 16px;
-}
-.logo-cofee-d345{
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-}
-.logo-cofee-d345 svg{
-    width: 36px;
-    height: 36px;
-}
-.logo-cof-text-d345 span{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: sans-serif;
-    margin-right: auto;
-}
-.nav-links{
-    margin-left: auto;
-}
-.links-menu{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 4px;
-    align-items: center;
-}
-.links-menu li{
-    list-style: none;
-}
-.links-menu a{
-    color: #ccc;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 15px;
-    padding: 7px 18px;
-    border-radius: 20px;
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-    cursor: pointer;
-}
-.links-menu a.active,
-.links-menu a:hover{
-    background: #e08a1e;
-    color: #fff;
-}
 
-/* Hamburger Button */
-.hamburger-btn-ue4r-d345{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    width: 36px;
-    height: 36px;
-}
-.hamburger-btn-ue4r-d345 span{
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .custom-header-ue4r-d345{
-        padding: 14px 0px;
-        gap: 12px;
-    }
-    .links-menu{
-        gap: 2px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 7px 14px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .custom-header-ue4r-d345{
-        position: relative;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 10px;
-        min-height: 60px;
-    }
-    .hamburger-btn-ue4r-d345{
-        display: flex;
-    }
-    .nav-links{
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0px;
-        width: 100%;
-        background: #2c1810;
-        margin-left: 0px;
-        z-index: 999;
-    }
-    .nav-links.open-menu-ue4r-d345{
-        display: block;
-    }
-    .links-menu{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-    }
-    .links-menu li{
-        width: 100%;
-        border-bottom: 1px solid #ffffff10;
-    }
-    .links-menu a{
-        display: block;
-        width: 100%;
-        border-radius: 0px;
-        padding: 14px 20px;
-        font-size: 15px;
-        box-sizing: border-box;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .custom-header-ue4r-d345{
-        min-height: 55px;
-        gap: 8px;
-    }
-    .logo-cofee-d345{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cofee-d345 svg{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 16px;
-    }
-    .nav-links{
-        top: 55px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 13px 16px;
-    }
-}
-</style>
-
-<div class="custom-main-ue4r-d345">
-    <div class="custom-inner-ue4r-d345">
-        <div class="custom-header-ue4r-d345">
-            <div class="logo-cofee-d345">
-                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
-                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
-                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
-                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
-                </svg>
-            </div>
-            <div class="logo-cof-text-d345">
-                <span>Coffee</span>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="nav-links-ue4r-d345">
-                <div class="links-menu">
-                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
-                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
-                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
-                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
-                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<script>
-    var hamburger = document.getElementById('hamburger-ue4r-d345');
-    var navLinks = document.getElementById('nav-links-ue4r-d345');
-
-    hamburger.addEventListener('click', function(){
-        navLinks.classList.toggle('open-menu-ue4r-d345');
-    });
-
-    var allLinks = document.querySelectorAll('.nav-link');
-    allLinks.forEach(function(link){
-        link.addEventListener('click', function(){
-            navLinks.classList.remove('open-menu-ue4r-d345');
-        });
-    });
-</script>
-<style>
-.gallery-main-77-d345{
-    width: 100%;
-    background-color: #ffffff;
-    max-width: 1300px;
-    margin: 0px auto;
-    overflow-x: hidden;
-}
-.gallery-inner-77-d345{
-    width: 100%;
-}
-.gallery-heading-top-77-d345{
-    text-align: center;
-    margin-bottom: 50px;
-}
-.gallery-heading-top-77-d345 h2{
-    font-family: sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #2c1810;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0px 0px 12px 0px;
-}
-.gallery-heading-top-77-d345::after{
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #e08a1e;
-    margin: 0px auto;
-    border-radius: 2px;
-}
-.gallery-grid-77-d345{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.gallery-single-img-77-d345{
-    width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.gallery-single-img-77-d345 img{
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
-    transition: transform 0.4s ease;
-}
-.gallery-single-img-77-d345:hover img{
-    transform: scale(1.08);
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .gallery-inner-77-d345{
-        padding: 50px 0px;
-    }
-    .gallery-grid-77-d345{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
-    .gallery-single-img-77-d345 img{
-        height: 220px;
-    }
-    .gallery-heading-top-77-d345 h2{
-        font-size: 28px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .gallery-inner-77-d345{
-        padding: 50px 0px;
-    }
-    .gallery-grid-77-d345{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
-    .gallery-single-img-77-d345 img{
-        height: 200px;
-    }
-    .gallery-heading-top-77-d345 h2{
-        font-size: 26px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .gallery-inner-77-d345{
-        padding: 40px 0px;
-    }
-    .gallery-grid-77-d345{
-        grid-template-columns: repeat(1, 1fr);
-        gap: 14px;
-    }
-    .gallery-single-img-77-d345 img{
-        height: 220px;
-    }
-    .gallery-heading-top-77-d345 h2{
-        font-size: 22px;
-    }
-}
-</style>
-
-<div class="gallery-main-77-d345">
-    <div class="gallery-inner-77-d345">
-
-        <div class="gallery-heading-top-77-d345">
-            <h2>Gallery</h2>
-        </div>
-
-        <div class="gallery-grid-77-d345">
-
-            <!-- Image 1 -->
-            <div class="gallery-single-img-77-d345">
-                <img src="gallery-1.jpg" alt="Gallery Image 1">
-            </div>
-
-            <!-- Image 2 -->
-            <div class="gallery-single-img-77-d345">
-                <img src="gallery-2.jpg" alt="Gallery Image 2">
-            </div>
-
-            <!-- Image 3 -->
-            <div class="gallery-single-img-77-d345">
-                <img src="gallery-3.jpg" alt="Gallery Image 3">
-            </div>
-
-            <!-- Image 4 -->
-            <div class="gallery-single-img-77-d345">
-                <img src="gallery-4.jpg" alt="Gallery Image 4">
-            </div>
-
-            <!-- Image 5 -->
-            <div class="gallery-single-img-77-d345">
-                <img src="gallery-5.jpg" alt="Gallery Image 5">
-            </div>
-
-            <!-- Image 6 -->
-            <div class="gallery-single-img-77-d345">
-                <img src="gallery-6.jpg" alt="Gallery Image 6">
-            </div>
-
-        </div>
-    </div>
-</div>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.custom-main-ue4r-d345{
-    width: 100%;
-}
-.custom-inner-ue4r-d345{
-    width: 100%;
-    max-width: 1300px;
-    margin: 0px auto;
-}
-.custom-header-ue4r-d345{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #3d0c11;
-    min-height: 70px;
-    gap: 16px;
-}
-.logo-cofee-d345{
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-}
-.logo-cofee-d345 svg{
-    width: 36px;
-    height: 36px;
-}
-.logo-cof-text-d345 span{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: sans-serif;
-    margin-right: auto;
-}
-.nav-links{
-    margin-left: auto;
-}
-.links-menu{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 4px;
-    align-items: center;
-}
-.links-menu li{
-    list-style: none;
-}
-.links-menu a{
-    color: #ccc;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 15px;
-    padding: 7px 18px;
-    border-radius: 20px;
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-    cursor: pointer;
-}
-.links-menu a.active,
-.links-menu a:hover{
-    background: #e08a1e;
-    color: #fff;
-}
-
-/* Hamburger Button */
-.hamburger-btn-ue4r-d345{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    width: 36px;
-    height: 36px;
-}
-.hamburger-btn-ue4r-d345 span{
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .custom-header-ue4r-d345{
-        padding: 14px 0px;
-        gap: 12px;
-    }
-    .links-menu{
-        gap: 2px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 7px 14px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .custom-header-ue4r-d345{
-        position: relative;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 10px;
-        min-height: 60px;
-    }
-    .hamburger-btn-ue4r-d345{
-        display: flex;
-    }
-    .nav-links{
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0px;
-        width: 100%;
-        background: #2c1810;
-        margin-left: 0px;
-        z-index: 999;
-    }
-    .nav-links.open-menu-ue4r-d345{
-        display: block;
-    }
-    .links-menu{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-    }
-    .links-menu li{
-        width: 100%;
-        border-bottom: 1px solid #ffffff10;
-    }
-    .links-menu a{
-        display: block;
-        width: 100%;
-        border-radius: 0px;
-        padding: 14px 20px;
-        font-size: 15px;
-        box-sizing: border-box;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 18px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .custom-header-ue4r-d345{
-        min-height: 55px;
-        gap: 8px;
-    }
-    .logo-cofee-d345{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cofee-d345 svg{
-        width: 30px;
-        height: 30px;
-    }
-    .logo-cof-text-d345 span{
-        font-size: 16px;
-    }
-    .nav-links{
-        top: 55px;
-    }
-    .links-menu a{
-        font-size: 14px;
-        padding: 13px 16px;
-    }
-}
-</style>
-
-<div class="custom-main-ue4r-d345">
-    <div class="custom-inner-ue4r-d345">
-        <div class="custom-header-ue4r-d345">
-            <div class="logo-cofee-d345">
-                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18" cy="18" r="18" fill="#e08a1e" opacity="0.15"/>
-                    <path d="M10 14h16v3a8 8 0 01-16 0v-3z" fill="#e08a1e"/>
-                    <rect x="24" y="12" width="4" height="6" rx="2" fill="#e08a1e" opacity="0.7"/>
-                    <rect x="12" y="25" width="12" height="2" rx="1" fill="#e08a1e" opacity="0.6"/>
-                </svg>
-            </div>
-            <div class="logo-cof-text-d345">
-                <span>Coffee</span>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger-btn-ue4r-d345" id="hamburger-ue4r-d345">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="nav-links-ue4r-d345">
-                <div class="links-menu">
-                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="About-us-page-1.html" class="nav-link" data-page="about">About</a></li>
-                    <li><a href="Menu-page-1.html" class="nav-link" data-page="menu">Menu</a></li>
-                    <li><a href="Testimonials-page-slider.html" class="nav-link" data-page="testimonials">Testimonials</a></li>
-                    <li><a href="gallery-page.html" class="nav-link" data-page="gallery">Gallery</a></li>
-                    <li><a href="contac-us-page-1.html" class="nav-link" data-page="contact">Contact</a></li>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<script>
-    var hamburger = document.getElementById('hamburger-ue4r-d345');
-    var navLinks = document.getElementById('nav-links-ue4r-d345');
-
-    hamburger.addEventListener('click', function(){
-        navLinks.classList.toggle('open-menu-ue4r-d345');
-    });
-
-    var allLinks = document.querySelectorAll('.nav-link');
-    allLinks.forEach(function(link){
-        link.addEventListener('click', function(){
-            navLinks.classList.remove('open-menu-ue4r-d345');
-        });
-    });
-</script>
-<style>
-.contact-main-88-d345{
-    width: 100%;
-    background-color: #fdf6f0;
-       max-width: 1300px;
-    margin: 0px auto;
-    min-height: 455px;
-  overflow-x: hidden;
-}
-.contact-inner-88-d345{
-    width: 100%;
-      padding: 20px 15px;
-}
-.contact-heading-top-88-d345{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.contact-heading-top-88-d345 h2{
-    font-family: sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #2c1810;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0px 0px 12px 0px;
-}
-.contact-heading-top-88-d345::after{
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #e08a1e;
-    margin: 0px auto;
-    border-radius: 2px;
-}
-.contact-flex-88-d345{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 60px;
-    margin-bottom: 60px;
-}
-.contact-info-88-d345{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-.contact-info-row-88-d345{
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-.contact-info-row-88-d345 svg{
-    width: 22px;
-    height: 22px;
-    stroke: #2c1810;
-    fill: none;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    flex-shrink: 0;
-}
-.contact-info-row-88-d345 span{
-    font-family: sans-serif;
-    font-size: 15px;
-    color: #2c1810;
-    line-height: 1.6;
-}
-.contact-form-88-d345{
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.contact-form-88-d345 input,
-.contact-form-88-d345 textarea{
-    width: 95%;
-    border: 1px solid #e0d6cf;
-    border-radius: 8px;
-    font-family: sans-serif;
-    font-size: 14px;
-    color: #2c1810;
-    background-color: #ffffff;
-    outline: none;
-    box-sizing: border-box;
-    transition: border 0.2s;
-    margin: 0px;
-    display: block;
-}
-.contact-form-88-d345 input{
-    line-height: 48px;
-    text-indent: 14px;
-}
-.contact-form-88-d345 textarea{
-    min-height: 130px;
-    resize: none;
-    text-indent: 14px;
-    line-height: 2;
-}
-.contact-form-88-d345 input::placeholder,
-.contact-form-88-d345 textarea::placeholder{
-    color: #aaaaaa;
-}
-.contact-form-88-d345 input:focus,
-.contact-form-88-d345 textarea:focus{
-    border: 1px solid #e08a1e;
-}
-.contact-submit-btn-88-d345{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 4px;
-}
-.contact-submit-btn-88-d345 button{
-    background-color: #2c1810;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.2s;
-    line-height: 46px;
-    width: 130px;
-    text-align: center;
-    display: block;
-}
-.contact-submit-btn-88-d345 button:hover{
-    background-color: #e08a1e;
-}
-
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px){
-    .contact-flex-88-d345{
-        gap: 40px;
-        margin-bottom: 50px;
-    }
-    .contact-heading-top-88-d345{
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    .contact-heading-top-88-d345 h2{
-        font-size: 28px;
-    }
-}
-
-
-/* ========== 768px ========== */
-@media (max-width: 768px){
-    .contact-inner-88-d345{
-        /*margin: 0px 30px;*/
-    }
-    .contact-flex-88-d345{
-        flex-direction: column;
-        gap: 36px;
-        margin-bottom: 40px;
-    }
-    .contact-info-88-d345{
-        width: 100%;
-    }
-    .contact-form-88-d345{
-        width: 100%;
-    }
-    .contact-heading-top-88-d345 h2{
-        font-size: 26px;
-    }
-}
-
-
-/* ========== 480px ========== */
-@media (max-width: 480px){
-    .contact-inner-88-d345{
-        margin: 0px 20px;
-    }
-    .contact-heading-top-88-d345{
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    .contact-heading-top-88-d345 h2{
-        font-size: 22px;
-    }
-    .contact-info-row-88-d345 span{
-        font-size: 13px;
-    }
-    .contact-form-88-d345 input{
-        font-size: 13px;
-    }
-    .contact-form-88-d345 textarea{
-        font-size: 13px;
-    }
-    .contact-submit-btn-88-d345 button{
-        font-size: 14px;
-    }
-}
-</style>
-
-<div class="contact-main-88-d345">
-    <div class="contact-inner-88-d345">
-
-        <div class="contact-heading-top-88-d345">
-            <h2>Contact Us</h2>
-        </div>
-
-        <div class="contact-flex-88-d345">
-
-            <!-- Left Info -->
-            <div class="contact-info-88-d345">
-
-                <div class="contact-info-row-88-d345">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#2c1810" stroke="none"/></svg>
-                    <span>123 Campsite Avenue, Wilderness, CA 98765</span>
-                </div>
-
-                <div class="contact-info-row-88-d345">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-                    <span>info@coffeeshopwebsite.com</span>
-                </div>
-
-                <div class="contact-info-row-88-d345">
-                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" fill="#2c1810" stroke="none"/></svg>
-                    <span>(123) 456-78909</span>
-                </div>
-
-                <div class="contact-info-row-88-d345">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
-                </div>
-
-                <div class="contact-info-row-88-d345">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>Saturday: 10:00 AM - 3:00 PM</span>
-                </div>
-
-                <div class="contact-info-row-88-d345">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>Sunday: Closed</span>
-                </div>
-
-                <div class="contact-info-row-88-d345">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-                    <span>www.codingnepalweb.com</span>
-                </div>
-
-            </div>
-
-            <!-- Right Form -->
-            <div class="contact-form-88-d345">
-                <input type="text" placeholder="Your name">
-                <input type="email" placeholder="Your email">
-                <textarea placeholder="Your message"></textarea>
-                <div class="contact-submit-btn-88-d345">
-                    <button type="submit">Submit</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
+</body>
+</html>
